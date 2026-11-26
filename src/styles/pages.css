@@ -1288,9 +1288,9 @@
   }
   :where(.site:not(.da):not(.db)) .hero__text > :not(.h1):not(.eyebrow) { order: 2; }
   :where(.site:not(.da):not(.db)) .hero .eyebrow, :where(.site:not(.da):not(.db)) .hero p.eyebrow, :where(.site:not(.da):not(.db)) .page-head .eyebrow, :where(.site:not(.da):not(.db)) .page-head p.eyebrow {
-    position: static; width: auto; max-width: 100%; padding: 0; margin: 0 0 20px; line-height: 1.8;
+    position: static; width: 100%; max-width: 100%; padding: 0; margin: 0 0 20px; line-height: 1.8;
     writing-mode: horizontal-tb; font-size: 12px; letter-spacing: 0.2em; background: none;
-    white-space: normal; text-wrap: wrap;
+    white-space: normal; text-wrap: wrap; text-align: left; justify-self: stretch;
   }
   :where(.site:not(.da):not(.db)) main > section:first-child::before { top: 40px; }
   :where(.site:not(.da):not(.db)) main > section:first-child::after { top: 28px; }
@@ -1321,7 +1321,23 @@
 :where(.site:not(.da):not(.db)) .ib, :where(.site:not(.da):not(.db)) .team3__team-name span { display: inline-block; }
 :where(.site:not(.da):not(.db)) h3, :where(.site:not(.da):not(.db)) h4, :where(.site:not(.da):not(.db)) summary, :where(.site:not(.da):not(.db)) .faq__q, :where(.site:not(.da):not(.db)) .team3__title .line, :where(.site:not(.da):not(.db)) td, :where(.site:not(.da):not(.db)) th, :where(.site:not(.da):not(.db)) .checks li, :where(.site:not(.da):not(.db)) .result__text, :where(.site:not(.da):not(.db)) .svc__note, :where(.site:not(.da):not(.db)) .region__sub, :where(.site:not(.da):not(.db)) .team3__goal, :where(.site:not(.da):not(.db)) .chips li, :where(.site:not(.da):not(.db)) .work__sub, :where(.site:not(.da):not(.db)) .statement__sub, :where(.site:not(.da):not(.db)) .fact__text { word-break: auto-phrase; text-wrap: pretty; }
 /* ファーストビューの写真：列の幅（＋画面端までの裁ち落とし）にぴったり合わせる */
-:where(.site:not(.da):not(.db)) .hero__photo, :where(.site:not(.da):not(.db)) .hero:has(.h1--long) .hero__photo { justify-self: stretch; width: auto; min-width: 0; }
+@media (min-width: 761px) {
+  :where(.site:not(.da):not(.db)) .hero__photo, :where(.site:not(.da):not(.db)) .hero:has(.h1--long) .hero__photo { justify-self: stretch; width: auto; min-width: 0; }
+}
+@media (max-width: 760px) {
+  :where(.site:not(.da):not(.db)) .hero__photo, :where(.site:not(.da):not(.db)) .hero:has(.h1--long) .hero__photo {
+    justify-self: start;
+    align-self: start;
+    width: calc(100% + max(var(--gutter), env(safe-area-inset-left, 0px)) + max(var(--gutter), env(safe-area-inset-right, 0px)) + var(--lane));
+    max-width: none;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    max-height: none;
+    margin: 0 calc(-1 * max(var(--gutter), env(safe-area-inset-right, 0px))) 32px calc(-1 * (max(var(--gutter), env(safe-area-inset-left, 0px)) + var(--lane)));
+  }
+}
 
 /* ---------- 15. 集客の仕掛け：ヒアリング・LINE特典・動画・折りたたみ ---------- */
 :where(.site:not(.da):not(.db)) .hearing__q { margin: 0 0 20px; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: var(--accent); }

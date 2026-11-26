@@ -317,6 +317,23 @@
 /* ---------- 記事ページ ---------- */
 .article { max-width: 720px; margin-inline: auto; }
 .article__head { padding-block: 88px 40px; }
+.article__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  margin-bottom: 24px;
+  padding: 0 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-btn);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  transition: border-color .2s var(--ease);
+}
+.article__back:hover { border-color: var(--ink); }
+.article__back:hover .arrow { transform: translateX(-4px); }
 .article__title { margin: 16px 0 32px; font-family: var(--mincho); font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.6; letter-spacing: 0.06em; }
 .article__eyecatch { aspect-ratio: 16 / 9; }
 .learn { margin: 40px 0 48px; padding: 28px 32px; border: 1px solid var(--rule); border-radius: var(--radius); }
@@ -1352,4 +1369,36 @@
 @media (max-width: 600px) {
   :where(.site:not(.da):not(.db)) .hero--balanced:not(.hero--top) .h1, :where(.site:not(.da):not(.db)) .hero--balanced:not(.hero--top) .h1.h1--long { font-size: 1.8rem; line-height: 1.5; }
   :where(.site:not(.da):not(.db)) .hero--balanced .h1 .mark { white-space: nowrap; }
+}
+
+/* ---------- 17. ブログ記事内テーブルのスマホ表示 ---------- */
+@media (max-width: 760px) {
+  .article__body table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  .article__body th,
+  .article__body td {
+    vertical-align: top;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 600px) {
+  .article__body table {
+    font-size: 12.5px;
+  }
+  .article__body th,
+  .article__body td {
+    padding: 10px 6px;
+    line-height: 1.65;
+  }
+  .article__body th:first-child,
+  .article__body td:first-child {
+    padding-left: 0;
+  }
+  .article__body th:last-child,
+  .article__body td:last-child {
+    padding-right: 0;
+  }
 }

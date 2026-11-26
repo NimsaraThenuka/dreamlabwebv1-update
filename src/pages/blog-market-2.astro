@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBlogPostingSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBlogPostingSchema(siteUrl, { title: "「いい商品なのに伝わらない」を解消する、作り手の想いと価値の言語化ステップ", description: "品質には自信があるのに、価格競争に巻き込まれたり新規取引につながらなかったりする原因は「伝え方の順番」にあります。商品の価値を言語化する3ステップを解説します。", path: "/blog-market-2", image: "/img/blog-market-2.jpg", datePublished: "2026-10-12", category: "販路開拓・海外販売" }),
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: 'ブログ', path: '/blog' }, { name: "「いい商品なのに伝わらない」を解消する、作り手の想いと価値の言語化ステップ", path: "/blog-market-2" }])
+];
+---
+
+<BaseLayout
+  title={"「いい商品なのに伝わらない」を解消する、作り手の想いと価値の言語化ステップ｜dreamLab"}
+  description={"品質には自信があるのに、価格競争に巻き込まれたり新規取引につながらなかったりする原因は「伝え方の順番」にあります。商品の価値を言語化する3ステップを解説します。"}
+  ogType={"article"}
+  ogImage={"/img/blog-market-2.jpg"}
+  activeNav={"blog"}
+  simpleHeader={false}
+  stickyBar={{ href: "/inquiry", label: "まずは30分、無料で相談", action: "申し込む →" }}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<div class="wrap">
+<article class="article">
+<header class="article__head">
+<p class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time datetime="2026-10-12">2026.10.12</time></p>
+<h1 class="article__title phrase">「いい商品なのに伝わらない」を解消する、作り手の想いと価値の言語化ステップ</h1>
+<img class="photo photo--img article__eyecatch" src="/img/blog-market-2.jpg" alt="和紙で包まれた地域の特産品と器">
+</header>
+
+<div class="learn">
+<p>この記事でわかること</p>
+<ul>
+<li>「良いものを作れば売れる」が通用しにくい現代の買い手の心理</li>
+<li>作り手の当たり前を、お客様にとっての「選ぶ理由」に変える質問</li>
+<li>国内外のバイヤーやギフト顧客に響くストーリー構成の型</li>
+</ul>
+</div>
+
+<div class="article__body">
+<h2>作り手にとっての「当たり前」が、一番の宝物</h2>
+<p>地域の事業者様と商品のお話をしていると、「特別なことは何もしていません、昔からこうやって作っているだけです」という言葉をよく耳にします。しかし、実際に現場で工程を見せていただくと、驚くほどの手間や土地ならではの知恵が詰まっていることがほとんどです。</p>
+<p>「いい商品なのに売上が伸びない」「価格を下げないと買ってもらえない」と感じるとき、商品の質が悪いのではなく、<strong>その背景にある価値が買い手の言葉に翻訳されていないだけ</strong>というケースが非常に多くあります。</p>
+
+<h3>スペックではなく「誰の、どんな時間を豊かにするか」</h3>
+<p>たとえば「地元産の素材を100%使用」という事実だけでは、他社製品との違いが伝わりにくい時代です。「忙しい週末の夜に、少し気持ちを緩めてくれる一杯」「大切な人への贈り物として安心して選べる理由」まで言葉にすることで、初めて価格ではなく価値で選ばれるようになります。</p>
+
+<img loading="lazy" decoding="async" class="photo photo--landscape photo--img" src="/img/blog-market-2-body.jpg" alt="棚に並んだ手づくりの陶器の器" style="margin: 32px 0">
+
+<h2>価値を言語化する3つのステップ</h2>
+<ul>
+  <li><strong>ステップ1｜「なぜそれを作っているのか」の原点を掘り起こす：</strong>技術的なこだわりだけでなく、作り手が譲れない想いや地域の風土を書き出します。</li>
+  <li><strong>ステップ2｜使われるシーンを具体的に描く：</strong>「どんな人が、誰と、どんな場面で使うと一番喜ぶか」を1つに絞って設定します。</li>
+  <li><strong>ステップ3｜写真・パッケージ・短い言葉で統一する：</strong>リーフレット、Webページ、梱包の雰囲気がバラバラにならないようトーンを揃えます。</li>
+</ul>
+
+<blockquote>「自分たちでは普通だと思っていた工程を言葉にしただけで、バイヤーの反応が驚くほど変わりました。」</blockquote>
+
+<table>
+  <thead>
+    <tr><th>伝わりにくい表現</th><th>価値が伝わる表現への言い換え例</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>伝統製法で丁寧に作りました</td><td>温度と湿度を見極め、3日かけて仕上げることで雑味のない後味を実現</td></tr>
+    <tr><td>お土産や自宅用にどうぞ</td><td>目上の方への季節のご挨拶や、週末のゆったりしたお茶時間に</td></tr>
+    <tr><td>国産素材を使用しています</td><td>福島の昼夜の寒暖差が育んだ果実を、旬の時期にだけ加工</td></tr>
+  </tbody>
+</table>
+
+<p>dreamLabの販路開拓支援では、まず30分の無料相談でお話を伺いながら、商品の魅力がどこに眠っているかを一緒に整理するところから始めています。</p>
+</div>
+
+<aside class="guide" aria-label="ご案内">
+<h2 class="phrase">自社の場合はどうなる？を、まずは30分で。</h2>
+<p class="phrase">今のお困りごとを伺い、どこから始めるのがよいかを一緒に確認します（オンライン・無料）。</p>
+<a class="btn-cta " href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a>
+</aside>
+
+<div class="share">
+<span>記事を共有する</span>
+<a href="#">Facebook</a>
+<a href="#">LINE</a>
+<button type="button">URLをコピー</button>
+</div>
+</article>
+
+<div style="margin-top: 64px">
+<div class="keep" style="grid-template-columns: minmax(0, 1fr)">
+<div class="keep__line">
+<div>
+<p class="label">LINE公式アカウント｜登録特典つき</p>
+<h2 class="phrase">まだ相談する段階ではない方も、<br class="pc">まずはLINEで。</h2>
+<p class="phrase">経営とAIのヒントや、セミナーのご案内をお届けします。</p><p class="keep__gift"><span class="keep__gift-tag">友だち登録でプレゼント</span><span class="keep__gift-name">PDF<span class="ib">「まるで自分が書いたような</span><span class="ib">メール作成方法」</span></span><span class="keep__gift-desc">AIを使って、自分らしい言葉づかいのメールを書く方法をまとめました。</span></p>
+<a class="btn-line btn-line--solid" href="#">友だち追加してPDFを受け取る<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="keep__qr" role="img" aria-label="LINE公式アカウントのQRコード">QRコード</div>
+</div>
+</div>
+</div>
+
+<section class="section" aria-labelledby="posts-title" style="border-top: 0">
+<div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">関連記事</h2></div>
+<ul class="posts">
+
+<li>
+<a href="/blog-market-1">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-1.jpg" alt="陶器の器を丁寧に梱包して発送準備をする手元"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time datetime="2026-10-28">2026.10.28</time></span>
+<span class="post-title">小さな工房・地域産品でも始められる、海外テスト販売と梱包設計のコツ</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-market-3">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-3.jpg" alt="海外発送用の箱を準備する工房の店主"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time datetime="2026-10-04">2026.10.04</time></span>
+<span class="post-title">展示会・越境ECに出る前に整えておきたい、BtoB・海外バイヤー向け商品シートの作り方</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-ai-1">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-1.jpg" alt="ノートパソコンを前に経営戦略を話し合う様子"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-11-02">2026.11.02</time></span>
+<span class="post-title">「業務が軽くなった」で終わらせない。AIで浮いた時間を売上に変える3つの視点</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+</ul>
+</section>
+</div>
+</main>
+</BaseLayout>

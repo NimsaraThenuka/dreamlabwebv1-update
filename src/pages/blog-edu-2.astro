@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBlogPostingSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBlogPostingSchema(siteUrl, { title: "いわき市と大熊町から考える、子育て世代と地域企業がつながる新しい共創の形", description: "いわき市の本社と大熊インキュベーションセンター（OIC）を拠点に、子育て世代・教育現場・地域企業が手を取り合って地域の課題を解決する取り組みをご紹介します。", path: "/blog-edu-2", image: "/img/blog-edu-2.jpg", datePublished: "2026-10-16", category: "教育・地域共創" }),
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: 'ブログ', path: '/blog' }, { name: "いわき市と大熊町から考える、子育て世代と地域企業がつながる新しい共創の形", path: "/blog-edu-2" }])
+];
+---
+
+<BaseLayout
+  title={"いわき市と大熊町から考える、子育て世代と地域企業がつながる新しい共創の形｜dreamLab"}
+  description={"いわき市の本社と大熊インキュベーションセンター（OIC）を拠点に、子育て世代・教育現場・地域企業が手を取り合って地域の課題を解決する取り組みをご紹介します。"}
+  ogType={"article"}
+  ogImage={"/img/blog-edu-2.jpg"}
+  activeNav={"blog"}
+  simpleHeader={false}
+  stickyBar={{ href: "/inquiry", label: "まずは30分、無料で相談", action: "申し込む →" }}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<div class="wrap">
+<article class="article">
+<header class="article__head">
+<p class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-10-16">2026.10.16</time></p>
+<h1 class="article__title phrase">いわき市と大熊町から考える、子育て世代と地域企業がつながる新しい共創の形</h1>
+<img class="photo photo--img article__eyecatch" src="/img/blog-edu-2.jpg" alt="地域の方々がテーブルを囲んで笑顔で話し合うワークショップ">
+</header>
+
+<div class="learn">
+<p>この記事でわかること</p>
+<ul>
+<li>いわき市と大熊町の2拠点で取り組む地域共創の背景</li>
+<li>子育て世代の視点とAI活用が、地域企業の担い手不足を補う理由</li>
+<li>学校・自治体・企業連携で実際に進めているプログラムの考え方</li>
+</ul>
+</div>
+
+<div class="article__body">
+<h2>地域の課題は、一つの立場だけでは解けない</h2>
+<p>dreamLabは、本社のある福島県いわき市と、大熊インキュベーションセンター（OIC）がある大熊町の2つの拠点を軸に活動しています。地域の経営者、保護者の方々、教育関係者とお話しする中で見えてくるのは、それぞれの課題が実は一本の線でつながっているということです。</p>
+<p>地域企業は「人手が足りない、若い人に残ってほしい」と悩み、子育て世代は「子どものそばにいながら自分の力を活かせる仕事がしたい」と願っています。そして子どもたちは「地元にどんな仕事や大人がいるのか」を知る機会を求めています。</p>
+
+<h3>「子育て世代 × AI × 地域企業」という可能性</h3>
+<p>AIやクラウドの仕組みが整うと、時間や場所の制約を受けにくい業務が増えます。フルタイムでの出社が難しい子育て世代の方々が、AIのサポートを受けながら企業の情報発信や事務の仕組み化を支える——そうした新しい関わり方が、福島の地域企業にとっても大きな力になります。</p>
+
+<img loading="lazy" decoding="async" class="photo photo--landscape photo--img" src="/img/blog-edu-2-body.jpg" alt="木のテーブルを囲みノートとパソコンで共創のアイデアを出し合う様子" style="margin: 32px 0">
+
+<h2>私たちが大切にしている共創のステップ</h2>
+<ul>
+  <li><strong>1. 立場を越えて本音を聞く場をつくる：</strong>企業・保護者・教育現場が同じテーブルを囲み、困りごとを共有します。</li>
+  <li><strong>2. 小さな実験プロジェクトから始める：</strong>いきなり大きな制度を作るのではなく、数ヶ月単位で試せるイベントや体験事業を形にします。</li>
+  <li><strong>3. 次の担い手につながる仕組みにする：</strong>一過性のイベントで終わらせず、地域の中にスキルや関係性が残る形を目指します。</li>
+</ul>
+
+<blockquote>「地元の大人たちが楽しそうに新しいことに挑戦している姿を見せること自体が、子どもたちの最高のキャリア教育になります。」</blockquote>
+
+<table>
+  <thead>
+    <tr><th>連携パートナー</th><th>持ち寄る強み</th><th>生まれる価値</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>地域企業・経営者</td><td>現場の課題・実社会の仕事・専門技術</td><td>実践的な学びの場と地域の雇用機会</td></tr>
+    <tr><td>子育て世代・地域住民</td><td>生活者の視点・柔軟な発想・地域ネットワーク</td><td>共感を生む発信力と多様な働き方の実現</td></tr>
+    <tr><td>dreamLab</td><td>教育ノウハウ・AI活用設計・ファシリテーション</td><td>企画の翻訳と継続できる仕組みの構築</td></tr>
+  </tbody>
+</table>
+
+<p>地域での協業、企業と教育を組み合わせたプログラム、取材や講演のご相談など、企画の初期段階からお気軽にお声がけください。</p>
+</div>
+
+<aside class="guide" aria-label="ご案内">
+<h2 class="phrase">自社の場合はどうなる？を、まずは30分で。</h2>
+<p class="phrase">今のお困りごとを伺い、どこから始めるのがよいかを一緒に確認します（オンライン・無料）。</p>
+<a class="btn-cta " href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a>
+</aside>
+
+<div class="share">
+<span>記事を共有する</span>
+<a href="#">Facebook</a>
+<a href="#">LINE</a>
+<button type="button">URLをコピー</button>
+</div>
+</article>
+
+<div style="margin-top: 64px">
+<div class="keep" style="grid-template-columns: minmax(0, 1fr)">
+<div class="keep__line">
+<div>
+<p class="label">LINE公式アカウント｜登録特典つき</p>
+<h2 class="phrase">まだ相談する段階ではない方も、<br class="pc">まずはLINEで。</h2>
+<p class="phrase">経営とAIのヒントや、セミナーのご案内をお届けします。</p><p class="keep__gift"><span class="keep__gift-tag">友だち登録でプレゼント</span><span class="keep__gift-name">PDF<span class="ib">「まるで自分が書いたような</span><span class="ib">メール作成方法」</span></span><span class="keep__gift-desc">AIを使って、自分らしい言葉づかいのメールを書く方法をまとめました。</span></p>
+<a class="btn-line btn-line--solid" href="#">友だち追加してPDFを受け取る<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="keep__qr" role="img" aria-label="LINE公式アカウントのQRコード">QRコード</div>
+</div>
+</div>
+</div>
+
+<section class="section" aria-labelledby="posts-title" style="border-top: 0">
+<div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">関連記事</h2></div>
+<ul class="posts">
+
+<li>
+<a href="/blog-edu-1">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-1.jpg" alt="ロボットづくりに取り組む子どもたち"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-10-24">2026.10.24</time></span>
+<span class="post-title">「失敗しても大丈夫」が子どもを変える。プログラミングとロボット教室が育む自己肯定感</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-edu-3">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-3.jpg" alt="講師と一緒にパソコンや電子工作を学ぶ子どもたち"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-09-29">2026.09.29</time></span>
+<span class="post-title">正解のない時代に必要な「自分で考えて動く力」を、地域の放課後から育てる</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-ai-1">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-1.jpg" alt="ノートパソコンを前に経営戦略を話し合う様子"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-11-02">2026.11.02</time></span>
+<span class="post-title">「業務が軽くなった」で終わらせない。AIで浮いた時間を売上に変える3つの視点</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+</ul>
+</section>
+</div>
+</main>
+</BaseLayout>

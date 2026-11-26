@@ -1,0 +1,15 @@
+---
+interface Props {
+  href?: string;
+  label?: string;
+  action?: string;
+}
+
+const {
+  href = '/inquiry',
+  label = 'まずは30分、無料で相談',
+  action = '申し込む →'
+} = Astro.props;
+---
+
+<a class="sticky-bar" href={href}><span>{label}</span><span>{action}</span></a>

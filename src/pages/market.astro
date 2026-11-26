@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildServiceSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildServiceSchema(siteUrl, '販路開拓支援', "商品やサービスの魅力を整え、国内外の新しい市場へ届ける販路開拓支援。販路診断、ECサイトの構築・運用、海外販売、eBay実践講座、ブランディング、情報発信まで。福島県いわき市のdreamLab。", '/market'),
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: '販路開拓支援', path: '/market' }])
+];
+---
+
+<BaseLayout
+  title={"販路開拓支援・ECサイト・海外販売（eBay）｜dreamLab（福島・いわき）"}
+  description={"商品やサービスの魅力を整え、国内外の新しい市場へ届ける販路開拓支援。販路診断、ECサイトの構築・運用、海外販売、eBay実践講座、ブランディング、情報発信まで。福島県いわき市のdreamLab。"}
+  ogType={"website"}
+  ogImage={"/img/market-hero.webp"}
+  activeNav={"market"}
+  simpleHeader={false}
+  stickyBar={false}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<section class="hero hero--balanced"><div class="wrap hero__grid"><div class="hero__text"><p class="eyebrow">販路開拓支援事業</p><h1 class="h1 h1--long"><span class="line">商品やサービスの魅力を整え、</span><span class="line"><span class="mark">新しい市場へ届ける<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 70 6, 150 4, 214 8 S 286 15, 297 9" fill="none" stroke="#7D6455" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></span></h1><div class="lead phrase"><p>福島の商品やサービスを、県外・海外へ。国内外の販路、ECサイト、ブランディング、情報発信を見直し、必要な人に届く仕組みをつくります。</p></div><div class="actions"><a class="btn-cta btn-cta--market" href="/inquiry?type=market">販路について相談する<span class="arrow" aria-hidden="true">→</span></a></div></div><img class="photo photo--portrait photo--img hero__photo" src="/img/market-hero.webp" alt="地元の器や菓子、酒を前に、販路について打合せをしている手元" style="object-position: 50% 50%;"></div></section><section class="section is-split" aria-labelledby="worry-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">お悩み</p><h2 class="h2" id="worry-title">こんなお悩みはありませんか</h2></div><ul class="numbered"><li><span class="num">01</span><p class="phrase">良い商品があるが、売り方が分からない</p></li><li><span class="num">02</span><p class="phrase">新しい取引先や販売先を見つけたい</p></li><li><span class="num">03</span><p class="phrase">地域の商品を、県外や海外にも届けたい</p></li><li><span class="num">04</span><p class="phrase">自社商品の強みをうまく説明できない</p></li><li><span class="num">05</span><p class="phrase">ホームページやSNSを作ったが反応がない</p></li><li><span class="num">06</span><p class="phrase">ECサイトを開いたが、思うように売れない</p></li><li><span class="num">07</span><p class="phrase">eBay（海外向けオークション・通販サイト）を基礎から学びたいが、出品や発送に不安がある</p></li></ul></div></section><section class="section is-dense" aria-labelledby="value-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">考え方</p><h2 class="h2 phrase" id="value-title">販路を広げる前に、商品の魅力を整理します。</h2><p class="section-lead phrase">新しい販売先を探すだけでは、継続的な販路にはつながりません。まずは、</p></div><div class="box"><ul class="numbered" style="margin-top: 0px;"><li><span class="num">01</span><p class="phrase">誰に届けたい商品なのか</p></li><li><span class="num">02</span><p class="phrase">どのような価値があるのか</p></li><li><span class="num">03</span><p class="phrase">他の商品との違いは何か</p></li><li><span class="num">04</span><p class="phrase">国内と海外のどちらに可能性があるのか</p></li><li><span class="num">05</span><p class="phrase">どのような伝え方が適しているのか</p></li></ul><p class="box__end phrase">dreamLabでは、商品や事業者の想いを丁寧に伺い、無理のない販路開拓の方法を一緒に考えます。</p></div></div></section><section class="statement" aria-label="小さく始めて、世界へ。"><div class="wrap statement__grid statement__grid--media-left"><img loading="lazy" decoding="async" class="statement__media" src="/img/market-statement-packing.webp" alt="工房の作業台で、手づくりの器を紙で包み、配送用の段ボール箱に詰めている手元" style="object-position: 50% 45%;"><div class="statement__text"><p class="statement__en" lang="en">Small Start, Big World</p><p class="statement__ja">小さく始めて、世界へ。</p><p class="statement__sub phrase">地方から世界へ。はじめての海外販路開拓を、一緒に。</p></div></div></section><section class="section" aria-labelledby="feature-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">特徴</p><h2 class="h2 phrase" id="feature-title">dreamLabの販路開拓支援の特徴</h2></div><ul class="numbered numbered--2"><li><span class="num">01</span><h3>国内と海外の両方から検討できる</h3><p class="phrase">最初から海外販売に限定せず、商品に合った市場や販売方法を整理します。</p></li><li><span class="num">02</span><h3>商品の魅力を言葉にする</h3><p class="phrase">販売先を探すだけでなく、商品や企業が選ばれる理由を明確にします。</p></li><li><span class="num">03</span><h3>学ぶだけでなく、実践まで支援する</h3><p class="phrase">講座や助言だけで終わらず、販売ページの作成や出品など、実際の行動まで支援します。</p></li><li><span class="num">04</span><h3>海外とのやりとりも、代表が直接</h3><p class="phrase">代表はアメリカへの留学経験があり、英語の指導にも長く携わってきました（TOEIC900点）。英語での商品説明や、海外のお客様とのやりとりも直接サポートします。</p></li></ul></div></section><section class="section is-split" aria-labelledby="svc-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">サービス</p><h2 class="h2" id="svc-title">dreamLabの販路開拓支援</h2></div><ul class="svc"><li><span class="price__no">01</span><h3>国内外の販路開拓診断</h3><p class="svc__desc phrase">商品、価格、ターゲット、競合、市場性を整理し、販売の可能性や課題を確認します</p></li><li><span class="price__no">02</span><h3>海外販路開拓支援</h3><p class="svc__desc phrase">商品が海外販売に向いているかを確認し、販売方法、対象国、販売ページ、発送方法などを整理します</p></li><li><span class="price__no">03</span><h3>eBay実践講座</h3><p class="svc__desc phrase">アカウント準備、商品リサーチ、出品、価格設定、発送など、海外販売に必要な流れを実践的に学びます</p></li><li><span class="price__no">04</span><h3>ブランディング支援</h3><p class="svc__desc phrase">商品や企業の強みを言葉とビジュアルで整理し、選ばれるための伝え方をつくります</p></li><li><span class="price__no">05</span><h3>ECサイトの構築・運用支援</h3><p class="svc__desc phrase">ECサイトの立ち上げから、購買データや広告の分析にもとづく改善まで。公開して終わりにせず、売れるサイトに育てます</p></li><li><span class="price__no">06</span><h3>情報発信・販売ツール作成支援</h3><p class="svc__desc phrase">ホームページ、商品紹介ページ、営業資料、SNSなど、販売につながる情報発信を支援します</p></li></ul></div></section><section class="section" aria-labelledby="ec-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">ECサイト</p><p class="label">ECサイトの構築・運用支援</p><h2 class="h2 phrase" id="ec-title">ECサイトは、<span class="mark">公開してからが本番</span>です。</h2><p class="section-lead phrase">つくって終わりにしません。購買データと広告の数字を読み、手を打ち、また確かめる。この繰り返しで、売れるサイトに育てます。</p></div><ul class="numbered numbered--4"><li><h3>売れる形でつくる</h3><p class="phrase">商品の魅力が伝わるページ構成と、購入までの迷わない導線を設計して、ECサイトを立ち上げます。</p></li><li><h3>広告で集める</h3><p class="phrase">検索広告やSNS広告で、商品に合うお客様をサイトへ呼び込みます。</p></li><li><h3>購買と広告を分析する</h3><p class="phrase">よく売れる商品、購入までの流れ、どこで離れているか、広告ごとの成果を数字で確かめます。</p></li><li><h3>改善して育てる</h3><p class="phrase">分析をもとにページ・商品・広告を見直し、改善をくり返して売上を伸ばします。</p></li></ul><p class="center-note phrase">分析と改善をくり返すほど、サイトは売れる形に近づきます。</p></div></section><section class="section is-dense" aria-labelledby="steps-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">流れ</p><h2 class="h2" id="steps-title">支援の流れ</h2></div><ol class="hsteps" style="--n: 5;"><li><span class="hsteps__no">1</span><span class="hsteps__time">STEP 1</span><h3>無料相談</h3><p class="phrase">商品やサービス、販売状況、今後の希望を伺います（30分・オンライン可）</p></li><li><span class="hsteps__no">2</span><span class="hsteps__time">STEP 2</span><h3>商品・事業の整理</h3><p class="phrase">商品の特徴、強み、対象となる顧客、販売上の課題を整理します</p></li><li><span class="hsteps__no">3</span><span class="hsteps__time">STEP 3</span><h3>市場・販路診断</h3><p class="phrase">国内市場や海外市場での販売方法を比較し、可能性のある販路を検討します</p></li><li><span class="hsteps__no">4</span><span class="hsteps__time">STEP 4</span><h3>販売方法のご提案</h3><p class="phrase">販売チャネル、情報発信、ブランディングなど、必要な取り組みをご提案します</p></li><li><span class="hsteps__no">5</span><span class="hsteps__time">STEP 5</span><h3>実行支援</h3><p class="phrase">販売ページやECサイトの運用改善、eBay出品、情報発信など、実際の販売活動を支援します</p></li></ol><div class="after-steps after-steps--center"><a class="btn-cta btn-cta--market" href="/inquiry?type=market">販路について相談する<span class="arrow" aria-hidden="true">→</span></a></div></div></section><section class="section is-dense" aria-labelledby="free-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">無料相談</p><h2 class="h2 phrase" id="free-title">30分の無料相談で整理できること</h2><p class="section-lead phrase">販売方法がまだ決まっていなくても大丈夫です。オンラインで、商品と今の状況を伺います。</p></div><div class="box"><ul class="checks checks--grid"><li>商品やサービスの強み</li><li>現在の販売上の課題</li><li>国内外の販路の可能性</li><li>eBayなど海外販売との相性</li><li>ECサイトの売上を伸ばす改善点</li><li>今後取り組むべき情報発信</li><li>最初に試す販売方法</li><li>販路開拓に使える補助金があるか</li></ul></div></div></section><section class="cta-band" aria-labelledby="cta-title"><div class="wrap cta-band__inner"><h2 id="cta-title" class="phrase">商品やサービスの新しい届け方を、一緒に考えませんか</h2><p class="phrase">まだ販売方法が決まっていない段階でもご相談いただけます。商品の特徴や現在の状況を伺い、取り組みやすい販路を一緒に整理します。</p><div class="actions"><a class="btn-cta btn-cta--market" href="/inquiry?type=market">販路について相談する<span class="arrow" aria-hidden="true">→</span></a></div><p class="note">料金の目安も、無料相談でお伝えします。相談後に、必ず契約する必要はありません。</p></div></section><section class="section" aria-labelledby="posts-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">関連記事</h2></div><ul class="posts">
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-1.jpg" alt="陶器の器を丁寧に梱包して発送準備をする手元"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-2.jpg" alt="和紙で包まれた地域の特産品と器"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-3.jpg" alt="海外発送用の箱を準備する工房の店主"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+</ul></div></section></main>
+</BaseLayout>

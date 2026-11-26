@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: "キャンセル・返金規定", path: "/cancel" }])
+];
+---
+
+<BaseLayout
+  title={"キャンセル・返金規定｜dreamLab"}
+  description={"株式会社dreamLabのキャンセル・返金規定。90分セッションおよび各支援サービスの解約・日程変更・返金条件についてご案内します。"}
+  ogType={"website"}
+  ogImage={"/img/top-hero-ceo-consult.webp"}
+  activeNav={""}
+  simpleHeader={false}
+  stickyBar={false}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<section class="page-head" style="padding-bottom: 40px">
+<div class="wrap">
+<ul class="tabs" aria-label="規約ページ" style="margin-bottom: 40px">
+
+<li><a href="/privacy">プライバシーポリシー</a></li>
+
+<li><a href="/confidentiality">秘密保持に関する方針</a></li>
+
+<li><a href="/cancel" aria-current="page">キャンセル・返金規定</a></li>
+
+<li><a href="/tokusho">特定商取引法に基づく表記</a></li>
+
+</ul>
+<h1 class="h1 phrase" style="font-size: clamp(1.6rem, 3vw, 2.5rem)">キャンセル・返金規定</h1>
+</div>
+</section>
+
+<section class="section" style="padding-top: 64px">
+<div class="wrap">
+<div class="legal phrase">
+
+<!-- P9-1 プライバシーポリシー -->
+
+
+<!-- P9-2 秘密保持に関する方針 -->
+
+
+<!-- P9-3 キャンセル・返金規定 -->
+
+<p>株式会社dreamLab（以下「当社」）の有料サービスのキャンセル・日程変更・返金は、次のとおりとします。</p>
+<h2>1. 90分セッション（50,000円・税抜／税込55,000円）</h2>
+<div class="compare-wrap">
+<table class="compare" style="min-width: 560px">
+<thead><tr><th scope="col">ご連絡の時期</th><th scope="col">キャンセルの場合</th><th scope="col">日程変更の場合</th></tr></thead>
+<tbody>
+<tr><td>セッションの3営業日前まで</td><td>無料（全額返金）</td><td>無料</td></tr>
+<tr><td>2営業日前から前日まで</td><td>料金の50%（税込27,500円）</td><td>1回まで無料</td></tr>
+<tr><td>当日、またはご連絡がない場合</td><td>料金の全額（税込55,000円）</td><td>お受けできません（キャンセル扱い）</td></tr>
+</tbody>
+</table>
+</div>
+<ul style="margin-top: 24px">
+<li>営業日は、土曜・日曜・祝日と年末年始を除く平日です。</li>
+<li>日程変更は1回までです。2回目以降の変更は、キャンセルとして扱います。</li>
+<li>ご連絡は、日程確定メールへの返信、またはお電話（050-6869-4334）でお願いします。受付時刻は、メールの送信時刻またはお電話をいただいた時刻とします。</li>
+<li>開始時刻に遅れた場合も、終了時刻は延長しません。</li>
+</ul>
+<h2>2. 当社の都合による変更・中止</h2>
+<p>担当者の急病や災害など当社の都合で実施できない場合は、日程を改めてご相談します。お客様が日程の変更を希望されない場合は、全額を返金します。オンラインで当社側の通信に不具合が生じ、予定の時間を実施できなかった場合は、無料で改めて実施します。</p>
+<h2>3. 返金の方法</h2>
+<ul>
+<li>クレジットカードでお支払いの場合：決済を取り消し、ご利用のカードに返金します。口座への反映時期は、カード会社によって異なります。</li>
+<li>銀行振込でお支払いの場合：ご指定の口座へ、当社が振込手数料を負担して返金します。</li>
+<li>返金は、キャンセルのご連絡をいただいてから10営業日以内に手続きします。</li>
+</ul>
+<h2>4. 経営診断・業務効率化・仕組み化診断・仕組みづくり伴走・経営AIパートナー</h2>
+<p>これらのサービスのキャンセル・解約・返金の条件は、ご契約時の契約書で定めます。</p>
+<h2>5. モニター企業（業務効率化・仕組み化診断・モニター価格）</h2>
+<p>モニター企業としてのお申込み後のキャンセルは、業務効率化・仕組み化診断の契約書の条件に従います。</p>
+<p class="legal__date">制定日：2026年11月1日</p>
+
+
+<!-- P9-4 特定商取引法に基づく表記 -->
+
+
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

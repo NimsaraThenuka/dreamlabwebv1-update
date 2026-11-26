@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBlogPostingSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBlogPostingSchema(siteUrl, { title: "正解のない時代に必要な「自分で考えて動く力」を、地域の放課後から育てる", description: "変化の速い時代に子どもたちが自分の道を切り拓くために必要な力とは何か。英語・プログラミング・地域の体験活動を通じてdreamLabが届けている学びの視点をお伝えします。", path: "/blog-edu-3", image: "/img/blog-edu-3.jpg", datePublished: "2026-09-29", category: "教育・地域共創" }),
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: 'ブログ', path: '/blog' }, { name: "正解のない時代に必要な「自分で考えて動く力」を、地域の放課後から育てる", path: "/blog-edu-3" }])
+];
+---
+
+<BaseLayout
+  title={"正解のない時代に必要な「自分で考えて動く力」を、地域の放課後から育てる｜dreamLab"}
+  description={"変化の速い時代に子どもたちが自分の道を切り拓くために必要な力とは何か。英語・プログラミング・地域の体験活動を通じてdreamLabが届けている学びの視点をお伝えします。"}
+  ogType={"article"}
+  ogImage={"/img/blog-edu-3.jpg"}
+  activeNav={"blog"}
+  simpleHeader={false}
+  stickyBar={{ href: "/inquiry", label: "まずは30分、無料で相談", action: "申し込む →" }}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<div class="wrap">
+<article class="article">
+<header class="article__head">
+<p class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-09-29">2026.09.29</time></p>
+<h1 class="article__title phrase">正解のない時代に必要な「自分で考えて動く力」を、地域の放課後から育てる</h1>
+<img class="photo photo--img article__eyecatch" src="/img/blog-edu-3.jpg" alt="講師と一緒にパソコンや電子工作を学ぶ子どもたち">
+</header>
+
+<div class="learn">
+<p>この記事でわかること</p>
+<ul>
+<li>これからの子どもたちに「暗記」以上に求められる3つの力</li>
+<li>放課後の時間だからこそできる、学年を越えた学びと体験の価値</li>
+<li>地域や企業とつながることで広がる子どもたちの視野</li>
+</ul>
+</div>
+
+<div class="article__body">
+<h2>「言われた通りにやる」だけでは足りなくなる時代</h2>
+<p>AIやデジタル技術が当たり前になるこれからの社会では、「すでに決まっている答えを正確に暗記すること」よりも、<strong>「今何が起きているのかを自分で考え、工夫して試してみる力」</strong>がますます重要になります。</p>
+<p>私たちは英語の学童保育やプログラミング教室を運営しながら、子どもたちがテストの点数だけでは測れない「自分の頭で考えて動く力」を自然に身につけられる環境づくりを続けてきました。</p>
+
+<h3>放課後は、好奇心をそのまま試せる大切な時間</h3>
+<p>学校の授業にはカリキュラムや時間割の制約がありますが、放課後の学びの場では、子ども一人ひとりの「これやってみたい！」「なんでこうなるの？」という興味を出発点にできます。少し年上のお兄さん・お姉さんの姿を見て刺激を受けたり、異年齢でチームを組んだりする経験も、放課後ならではの貴重な財産です。</p>
+
+<img loading="lazy" decoding="async" class="photo photo--landscape photo--img" src="/img/blog-edu-3-body.jpg" alt="学びや創造力を育むカラフルな木製ブロック" style="margin: 32px 0">
+
+<h2>地域の放課後から育てたい3つの力</h2>
+<ul>
+  <li><strong>1. 問いを立てる力：</strong>「どうやったらもっと面白くなるだろう？」と自分でテーマを見つける習慣を育てます。</li>
+  <li><strong>2. 相手に伝える力：</strong>英語やプレゼンテーションを通じて、自分の考えを言葉や形にして誰かに届ける楽しさを知ります。</li>
+  <li><strong>3. 仲間と進める力：</strong>意見が違う友達とも協力し、一つの目標に向かって役割を分担してやり切る経験を積みます。</li>
+</ul>
+
+<blockquote>「小さな一歩を自分で選んで踏み出せた経験は、大きくなって壁にぶつかったときの支えになります。」</blockquote>
+
+<table>
+  <thead>
+    <tr><th>学びの活動</th><th>表に見えるスキル</th><th>内面に育つ力</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>英語コミュニケーション</td><td>語彙・リスニング・発話</td><td>完璧でなくても伝えようとする度胸</td></tr>
+    <tr><td>プログラミング・電子工作</td><td>論理的思考・PC操作</td><td>原因を分解して粘り強く直す力</td></tr>
+    <tr><td>地域イベント・チーム企画</td><td>段取り・発表・協力</td><td>社会とつながり誰かの役に立つ喜び</td></tr>
+  </tbody>
+</table>
+
+<p>「小さな一歩が、未来をひらく。」——この理念のもと、dreamLabは子どもたちの学びと地域の挑戦をこれからもつなぎ続けます。</p>
+</div>
+
+<aside class="guide" aria-label="ご案内">
+<h2 class="phrase">自社の場合はどうなる？を、まずは30分で。</h2>
+<p class="phrase">今のお困りごとを伺い、どこから始めるのがよいかを一緒に確認します（オンライン・無料）。</p>
+<a class="btn-cta " href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a>
+</aside>
+
+<div class="share">
+<span>記事を共有する</span>
+<a href="#">Facebook</a>
+<a href="#">LINE</a>
+<button type="button">URLをコピー</button>
+</div>
+</article>
+
+<div style="margin-top: 64px">
+<div class="keep" style="grid-template-columns: minmax(0, 1fr)">
+<div class="keep__line">
+<div>
+<p class="label">LINE公式アカウント｜登録特典つき</p>
+<h2 class="phrase">まだ相談する段階ではない方も、<br class="pc">まずはLINEで。</h2>
+<p class="phrase">経営とAIのヒントや、セミナーのご案内をお届けします。</p><p class="keep__gift"><span class="keep__gift-tag">友だち登録でプレゼント</span><span class="keep__gift-name">PDF<span class="ib">「まるで自分が書いたような</span><span class="ib">メール作成方法」</span></span><span class="keep__gift-desc">AIを使って、自分らしい言葉づかいのメールを書く方法をまとめました。</span></p>
+<a class="btn-line btn-line--solid" href="#">友だち追加してPDFを受け取る<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="keep__qr" role="img" aria-label="LINE公式アカウントのQRコード">QRコード</div>
+</div>
+</div>
+</div>
+
+<section class="section" aria-labelledby="posts-title" style="border-top: 0">
+<div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">関連記事</h2></div>
+<ul class="posts">
+
+<li>
+<a href="/blog-edu-1">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-1.jpg" alt="ロボットづくりに取り組む子どもたち"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-10-24">2026.10.24</time></span>
+<span class="post-title">「失敗しても大丈夫」が子どもを変える。プログラミングとロボット教室が育む自己肯定感</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-edu-2">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-2.jpg" alt="地域の方々がテーブルを囲んで笑顔で話し合うワークショップ"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-10-16">2026.10.16</time></span>
+<span class="post-title">いわき市と大熊町から考える、子育て世代と地域企業がつながる新しい共創の形</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-ai-1">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-1.jpg" alt="ノートパソコンを前に経営戦略を話し合う様子"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-11-02">2026.11.02</time></span>
+<span class="post-title">「業務が軽くなった」で終わらせない。AIで浮いた時間を売上に変える3つの視点</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+</ul>
+</section>
+</div>
+</main>
+</BaseLayout>

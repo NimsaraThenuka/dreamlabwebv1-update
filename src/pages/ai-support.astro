@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { AI_SUPPORT_FAQ_SCHEMA, buildServiceSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildServiceSchema(siteUrl, 'AI経営支援', "AIを入れることから始めない、福島の中小企業向けAI経営支援。社長の時間の使い方から考え、AIとシステムで業務を仕組みにし、売上につなげるまで伴走します。90分セッション50,000円（税抜）から。サービス内容と料金、事例、よくある質問。", '/ai-support'),
+  AI_SUPPORT_FAQ_SCHEMA,
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: 'AI経営支援', path: '/ai-support' }])
+];
+---
+
+<BaseLayout
+  title={"AI経営支援・料金｜中小企業のAI導入と業務効率化｜dreamLab（福島・いわき）"}
+  description={"AIを入れることから始めない、福島の中小企業向けAI経営支援。社長の時間の使い方から考え、AIとシステムで業務を仕組みにし、売上につなげるまで伴走します。90分セッション50,000円（税抜）から。サービス内容と料金、事例、よくある質問。"}
+  ogType={"website"}
+  ogImage={"/img/ai-meeting.webp"}
+  activeNav={"ai-support"}
+  simpleHeader={false}
+  stickyBar={{ href: "/inquiry", label: "まずは30分、無料で相談", action: "申し込む →" }}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<section class="hero hero--balanced"><div class="wrap hero__grid"><div class="hero__text"><p class="eyebrow">AI経営支援</p><h1 class="h1"><span class="line">AIを入れることから、</span><span class="line"><span class="mark">始めない。<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 70 6, 150 4, 214 8 S 286 15, 297 9" fill="none" stroke="#7D6455" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></span></h1><div class="lead phrase"><p>まず決めるのは、社長の時間をどこに使うかです。どの仕事を社長の手から離せば会社が伸びるのかを一緒に見極め、AIやシステムで仕組みにし、浮いた時間を売上につなげるまで伴走します。</p></div><div class="actions"><a class="btn-cta" href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a><a class="link-arrow" href="/session">90分セッションの詳細を見る<span class="arrow" aria-hidden="true">→</span></a></div><p class="note phrase">オンライン（Zoom）・30分・無料。フォームは1分で送れて、日程はメールで調整します。</p></div><img class="photo photo--portrait photo--img hero__photo" src="/img/ai-meeting.webp" alt="代表の小川智美が、社長と打合せをしている様子" style="object-position: 18% 50%;"></div></section><section class="band" aria-label="モニター企業の募集" style="padding-block: 28px;"><div class="wrap" style="display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center; justify-content: space-between;"><div style="min-width: 0px; flex: 1 1 420px;"><p class="label" style="margin: 0px 0px 8px;">モニター企業を募集｜先着3社（限定）</p><p class="phrase" style="margin: 0px; font-weight: 700; line-height: 1.8;">業務効率化・仕組み化診断（通常30万円・税抜）を、モニター価格20万円（税抜）でお受けします。</p></div><a class="btn-cta btn-cta--sm" href="/inquiry?type=pilot">モニター企業について相談する<span class="arrow" aria-hidden="true">→</span></a></div></section><section class="section is-split" aria-labelledby="worry-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">お悩み</p><h2 class="h2" id="worry-title">こんなお悩みはありませんか</h2></div><ul class="numbered"><li><span class="num">01</span><p class="phrase">社長や一部の社員に業務が集中している</p></li><li><span class="num">02</span><p class="phrase">同じ入力や資料作成を繰り返している</p></li><li><span class="num">03</span><p class="phrase">人手不足だが、すぐに採用するのは難しい</p></li><li><span class="num">04</span><p class="phrase">AIに興味はあるが、自社での使い方が分からない</p></li><li><span class="num">05</span><p class="phrase">効率化しても、空いた時間が売上につながっていない</p></li><li><span class="num">06</span><p class="phrase">ツールを入れたのに、社内に定着しなかった</p></li></ul></div></section><section class="section is-loose" aria-labelledby="before-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">データ</p><h2 class="h2 phrase" id="before-title">AIを入れる前に、決めることがあります。</h2></div><ul class="stats"><li class="stat"><span class="stat__num">91.6<small>%</small></span><span class="stat__text phrase">AI導入で効果があった企業のうち、<br>「業務の効率化・迅速化」を挙げた割合</span></li><li class="stat stat--strong"><span class="stat__num"><span class="mark"><span class="count">3.9</span><small>%</small><svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 80 5, 170 5, 230 9 S 288 14, 297 8" fill="none" stroke="#7D6455" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></span><span class="stat__text phrase">AI導入で効果があった企業のうち、<br>「売上・利益の向上」を挙げた割合</span></li></ul><p class="source phrase" style="margin-top: 0px;">出典：IPA『DX動向2026』図表7「AI導入による効果の内容」（n=853・複数回答）</p><div class="figure"><figure class="figure" style="margin: 0" aria-labelledby="fig3-title">
+<p class="figure__title" id="fig3-title">効率化で終わらせず、売上までつなぐ</p>
+<p class="figure__sub">社長の時間が売上に変わるまでの4段階</p>
+<div class="flow">
+<div class="flow__box flow__b1"><strong>社長に集中する仕事</strong><span>営業・採用・現場・事務</span></div>
+<div class="flow__arrow flow__a1" aria-hidden="true"><span class="pc">→</span><span class="sp">↓</span></div>
+<div class="flow__box flow__b2"><strong>AIと仕組みで手を離す</strong><span>入力や転記を自動化</span></div>
+<div class="flow__arrow flow__a2" aria-hidden="true"><span class="pc">→</span><span class="sp">↓</span></div>
+<div class="flow__box flow__b3"><strong>浮いた時間を営業へ</strong><span>新事業や顧客対応にも</span></div>
+<div class="flow__arrow flow__a3" aria-hidden="true"><span class="pc">→</span><span class="sp">↓</span></div>
+<div class="flow__box flow__box--goal flow__b4"><strong>売上につながる</strong><span>会社の次の成長へ</span></div>
+<div class="flow__br1" aria-hidden="true"></div>
+<p class="flow__cap1 phrase">多くのAI導入は、ここで止まる（効果があった企業でも「売上・利益の向上」を挙げたのは3.9%）</p>
+<div class="flow__br2" aria-hidden="true"></div>
+<p class="flow__cap2 phrase">dreamLabは、売上につながるところまで伴走します</p>
+</div>
+</figure></div><div class="box" style="margin-top: 72px;"><ul class="numbered numbered--2" style="margin-top: 0px;"><li><span class="num">01</span><p class="phrase">社長の時間は、どこに使われているのか</p></li><li><span class="num">02</span><p class="phrase">繰り返している仕事、人に依存している仕事は何か</p></li><li><span class="num">03</span><p class="phrase">AIやシステムに任せられる仕事は何か</p></li><li><span class="num">04</span><p class="phrase">浮いた時間を、何に使えば売上につながるのか</p></li></ul><p class="box__end phrase">dreamLabは、ツールから始めず、会社の目標と社長の時間の使い方から考えます。</p></div></div></section><section class="section" aria-labelledby="svc-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">サービス</p><h2 class="h2" id="svc-title">dreamLabのAI経営支援</h2></div><ul class="svc" style="padding-top: 14px;"><li class="is-first"><span class="tag">まずはここから</span><span class="price__no">01</span><h3>90分セッション</h3><p class="svc__price">50,000円（税抜）<span class="tax-in">税込55,000円</span></p><p class="svc__desc phrase">課題の優先順位と、次の30日の行動計画を一緒につくります。</p><p class="credit-note phrase">30日以内に診断へ進む場合、セッション料金（50,000円・税抜）を診断料金から差し引きます</p><a class="link-arrow" href="/session">詳細を見る<span class="arrow" aria-hidden="true">→</span></a></li><li><span class="price__no">02</span><h3>経営診断</h3><p class="svc__term">2週間</p><p class="svc__desc phrase">決算書（直近2〜3期）をもとに、収益の構造とお金の流れを分析し、経営の課題と優先順位を判断します。税務申告や税務相談は行いません（顧問税理士の方と連携します）</p></li><li><span class="price__no">03</span><h3>業務効率化・仕組み化診断</h3><p class="svc__term">1〜2か月</p><p class="svc__desc phrase">エンジニアが現地に伺い、今のシステムと業務を棚卸しし、働く方の仕事の流れ（ワークフロー）をヒアリングします。何を仕組みにするかを決め、効果と費用を見積もります</p></li><li><span class="price__no">04</span><h3>仕組みづくり伴走</h3><p class="svc__term">6〜12か月</p><p class="svc__desc phrase">AIで業務とデータの流れをつくり、社内で回せる推進役を育てます。システムの設計・構築は開発チームと連携して対応します</p><p class="svc__note">AIの設計・構築・実装は別途お見積もり</p></li><li><span class="price__no">05</span><h3>経営AIパートナー</h3><p class="svc__term">6〜12か月</p><p class="svc__desc phrase">月2回の経営会議に入り、データから「次の一手」を一緒に考え続けます</p></li><li><span class="price__no">06</span><h3>AI研修・セミナー</h3><p class="svc__desc phrase">ChatGPTなどの基本から、自社の業務で使う方法まで、社員向けにお伝えします</p></li></ul><p class="estimate-note"><strong>別途お見積もり</strong><span class="phrase">90分セッション以外の料金は、内容に応じて個別にお見積もりします。AIの設計・構築・実装も、別途お見積もりとなります。料金の目安は、30分の無料相談で必ずお伝えします。</span></p><p class="tax-note">90分セッションの価格は税抜です（税込価格を下に小さく併記しています）</p><details class="more"><summary>仕組みづくり伴走と、経営AIパートナーの違いを見る</summary><div class="more__body"><div class="compare-wrap"><table class="compare"><thead><tr><td></td><th scope="col">仕組みづくり伴走</th><th scope="col">経営AIパートナー</th></tr></thead><tbody><tr><th scope="row">目的</th><td>AIで業務とデータの流れをつくり、社内に定着させる</td><td>データから「次の一手」を考え続け、経営判断を支える</td></tr><tr><th scope="row">中心になること</th><td>仕組みの設計・構築・定着、社内の推進役の育成</td><td>月2回の経営会議に入り、数字をもとに一緒に考える</td></tr><tr><th scope="row">期間</th><td>6〜12か月</td><td>6〜12か月</td></tr><tr><th scope="row">向いている会社</th><td>つくりたい仕組みが見えてきた会社</td><td>仕組みが回り始め、経営の相談役がほしい会社</td></tr></tbody></table></div><p class="source phrase">仕組みづくり伴走のあと、経営AIパートナーへ進むのが一般的な流れです。どちらか一方だけのご利用も可能です。</p></div></details></div></section><section class="section is-dense" aria-labelledby="subsidy-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">補助金</p><p class="label">補助金の活用</p><h2 class="h2 phrase" id="subsidy-title">補助金を使えるかどうかも、一緒に確認します。</h2><p class="section-lead phrase">取り組みの内容や会社の状況によっては、dreamLabの支援に使える補助金があります。どの補助金が使えるか、公募の時期も含めて、30分の無料相談で一緒に確認します。</p></div><div class="box"><ul class="checks checks--grid"><li>使える補助金があるかの確認</li><li>公募の時期に合わせたスケジュール</li><li>補助金の対象になる費用・ならない費用の整理</li><li>補助金を使わない場合の進め方との比較</li></ul></div><p class="source phrase">補助金の対象になるかどうかは、制度の要件や公募の時期によって異なります。最新の公募要領をもとに確認します。</p><div class="after-steps after-steps--center"><a class="btn-cta" href="/inquiry">補助金について無料で相談する<span class="arrow" aria-hidden="true">→</span></a></div></div></section><section class="section pilot" aria-labelledby="pilot-title"><div class="wrap pilot__grid"><h2 id="pilot-title">先着3社限定<br>業務効率化・仕組み化診断のモニター企業を募集</h2><div class="pilot__body"><p class="phrase">通常30万円（税抜）の業務効率化・仕組み化診断を、モニター価格<strong>20万円（税抜）</strong>でお受けします。</p><p class="pilot__target-label">こんな会社が対象です</p><ul class="pilot__target"><li>社員10〜50名ほどで、システムやExcelを手作業でつないでいる</li><li>診断の結果を、事例として（ご了承のうえ）紹介してもよい</li></ul><a class="btn-cta" href="/inquiry?type=pilot">モニター企業について相談する<span class="arrow" aria-hidden="true">→</span></a></div></div></section><section class="section is-dense" aria-labelledby="steps-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">流れ</p><h2 class="h2" id="steps-title">支援の流れ</h2></div><ol class="hsteps" style="--n: 5;"><li><span class="hsteps__no">1</span><span class="hsteps__time">STEP 1</span><h3>無料相談（任意）</h3><p class="phrase">30分で、お困りごとと進め方を確認します</p></li><li><span class="hsteps__no">2</span><span class="hsteps__time">STEP 2</span><h3>90分セッション</h3><p class="phrase">課題の優先順位と30日の行動計画を決めます</p></li><li><span class="hsteps__no">3</span><span class="hsteps__time">STEP 3</span><h3>診断（2種類）</h3><p class="phrase">決算書から見る経営診断、または現地で業務を棚卸しする仕組み化診断</p></li><li><span class="hsteps__no">4</span><span class="hsteps__time">STEP 4</span><h3>仕組みづくり伴走</h3><p class="phrase">AIで仕組みをつくり、社内に定着させます</p></li><li><span class="hsteps__no">5</span><span class="hsteps__time">STEP 5</span><h3>経営AIパートナー</h3><p class="phrase">月2回の経営会議で、データから次の一手を一緒に考えます</p></li></ol><div class="after-steps after-steps--center"><p style="margin: 0px;">どのステップでやめても大丈夫です。</p><a class="btn-cta" href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a></div></div></section><section class="section" aria-labelledby="feature-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">チーム</p><h2 class="h2 phrase" id="feature-title">社長をひとりにしない、経営のチーム。</h2></div><figure class="team3" aria-labelledby="fig2-title">
+<div class="team3__copy">
+<p class="label">dreamLabが目指す支援</p>
+<p class="team3__title" id="fig2-title"><span class="line">経営者の右腕として、</span><span class="line"><span class="mark">考えることから実行まで。</span></span></p>
+<p class="team3__lead phrase">決めるのは、社長。<br>dreamLabは、その思考と実行を支えるチーム。</p>
+</div>
+<div class="team3__chart">
+<div class="team3__ceo">社長</div>
+<p class="team3__ceo-role">会社の未来を描き、決める</p>
+<div class="team3__team">
+<p class="team3__team-name">dreamLabチーム<span>（経営者の右腕）</span></p>
+<div class="team3__cols">
+<div class="team3__col"><p class="team3__col-head">考える</p><ul><li>思考の整理</li><li>課題と戦略の整理</li></ul></div>
+<div class="team3__col"><p class="team3__col-head">つくる</p><ul><li>AI・データ活用</li><li>仕組みづくりと実行</li></ul></div>
+</div>
+</div>
+<p class="team3__goal"><span class="ib">社長ひとりに依存せず、</span><span class="ib">成長できる会社</span></p>
+</div>
+<p class="team3__note phrase">「つくる」のAI・システム開発は、連携する開発チームと一緒に、設計から実装・運用まで一つのチームで進めます。</p>
+</figure><ul class="numbered strengths"><li><span class="num">01</span><h3>小さく始められる</h3><p class="phrase">大きなシステムを一度に入れるのではなく、効果の大きい仕事から一つずつ仕組みにします。</p></li><li><span class="num">02</span><h3>経営から逆算する</h3><p class="phrase">業務の削減だけでなく、浮いた時間を営業や新しい事業にどう使うかまで一緒に決めます。</p></li><li><span class="num">03</span><h3>つくるところまで対応</h3><p class="phrase">提案で終わらせず、開発パートナーと設計から構築まで行い、現場の人に聞きながら使いやすい形に仕上げます。</p></li></ul></div></section><section class="band" id="case" aria-labelledby="case-title" style="padding-block: var(--section);"><div class="wrap"><p class="label">事例｜ヘアメイクの会社</p><h2 class="h2" id="case-title" style="margin-bottom: 0px;"><span class="line">年商5,000万円から、来期8,000万円を目指す。</span><span class="line">成長を受け止める仕組みを、先につくる。</span></h2><div class="case-flow"><div><span class="case-flow__label">課題</span><p class="phrase">役員が電話・スケジュール更新・確認作業に張りつき、1案件に85分（実測）</p></div><div class="case-flow__arrow" aria-hidden="true"><span class="pc">→</span><span class="sp">↓</span></div><div><span class="case-flow__label">対応</span><p class="phrase">システム間の入力と修正を自動化。現場の方に聞きながら構築</p></div><div class="case-flow__arrow" aria-hidden="true"><span class="pc">→</span><span class="sp">↓</span></div><div><span class="case-flow__label">成果</span><p class="phrase">1案件17分。年170時間を営業へ回し、1人あたり年約60万円（年20件分）の売上につなげる計画です。来期の年商8,000万円を受け止める体制へ</p></div></div><blockquote class="quote case-quote"><p>神経をすり減らしていた業務から<br class="sp">解放される。<br class="pc">しかもワンクリック。<br class="sp">最高！</p><cite>— 役員の方</cite></blockquote><p class="source phrase" style="margin-top: 40px;">85分は導入前の実測値です。17分・年170時間・約60万円は、仕組みの稼働後を想定した試算です。</p></div></section><section class="section" aria-label="無料相談とおすすめの企業"><div class="wrap two-col"><div><h3>30分の無料相談で確認できること</h3><p class="two-col__note">オンライン</p><ul class="checks"><li>今のお困りごと</li><li>AIや仕組みで対応できそうか</li><li>どのステップから始めるのがよいか</li><li>費用の目安</li><li>使える補助金があるか</li></ul></div><div><h3>このような企業におすすめです</h3><p class="two-col__note"></p><ul class="checks"><li>社員10〜50名ほどの会社</li><li>システムやExcelを、手作業でつないでいる</li><li>人は足りないが、お客様はもっと増やしたい</li><li class="phrase">予約・受注型のサービス業（ヘアメイク・ブライダル、旅館・ホテル、冠婚葬祭など）</li><li>建設・設備工事、小規模な製造・食品加工</li><li>事業を継いだ2代目・後継ぎの社長</li></ul></div></div></section><section class="section is-dense" aria-labelledby="seminar-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">研修</p><p class="label">AI研修・セミナー・講演</p><h2 class="h2 phrase" id="seminar-title">社員の方にも、経営者の仲間にも、AIの使い方を。</h2></div><ul class="numbered numbered--2"><li><span class="num">01</span><h3>セミナー・講演</h3><p class="phrase">商工会・経営者団体・企業向け。ChatGPTなどの基本から、自社の仕事で使う場面まで。</p></li><li><span class="num">02</span><h3>社内研修</h3><p class="phrase">社員の方向けに、実際の業務を題材にした実践型でお伝えします。</p></li></ul><p class="source phrase">料金は内容・人数に応じて個別にお見積もりします。</p><div class="after-steps after-steps--center"><a class="btn-cta" href="/inquiry?type=education">研修・講演について相談する<span class="arrow" aria-hidden="true">→</span></a><a class="link-arrow" href="/blog">開催レポートを読む<span class="arrow" aria-hidden="true">→</span></a></div></div></section><section class="section is-split" aria-labelledby="faq-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">よくある質問</p><h2 class="h2" id="faq-title">よくある質問</h2></div><div class="faq"><details open=""><summary><span class="faq__q">Q</span>AIの導入は必須ですか？</summary><p class="faq__a phrase">必須ではありません。仕組みの見直しだけで解決することもあります。</p></details><details><summary><span class="faq__q">Q</span>AIに詳しくなくても大丈夫ですか？</summary><p class="faq__a phrase">大丈夫です。専門用語を使わずにお話しします。</p></details><details><summary><span class="faq__q">Q</span>経営診断と業務効率化・仕組み化診断は、どちらを選べばいいですか？</summary><p class="faq__a phrase">数字から会社の課題と優先順位を知りたい場合は経営診断、現場の業務やシステムを見直したい場合は仕組み化診断が向いています。迷う場合は、90分セッションや30分の無料相談で一緒に決めます。</p></details><details><summary><span class="faq__q">Q</span>経営診断では税金の相談もできますか？</summary><p class="faq__a phrase">税務申告や税務相談は行いません。必要な場合は、顧問税理士の方と連携して進めます。</p></details><details><summary><span class="faq__q">Q</span>仕組み化診断では、何をしますか？</summary><p class="faq__a phrase">エンジニアが現地に伺い、今お使いのシステムと業務を棚卸しし、実際に働く方に仕事の流れを伺います。そのうえで、何を仕組みにすれば効果が大きいかを決め、費用と効果を見積もります。</p></details><details><summary><span class="faq__q">Q</span>補助金は使えますか？</summary><p class="faq__a phrase">取り組みの内容によっては、dreamLabの支援に使える補助金があります。どの補助金が対象になるか、公募の時期も含めて、30分の無料相談で一緒に確認します。なお、「デジタル化・AI導入補助金」（旧IT導入補助金）は、登録されたITツールの導入が対象のため、dreamLabの支援には使えません。</p></details><details><summary><span class="faq__q">Q</span>社内にITに詳しい人がいません。</summary><p class="faq__a phrase">問題ありません。仕組みを回す担当の方を、伴走の中で一緒に育てます。</p></details><details><summary><span class="faq__q">Q</span>伴走の費用はどのくらいですか？</summary><p class="faq__a phrase">内容と期間によって変わるため、業務効率化・仕組み化診断の最後に、費用と効果の見込みをお出しします。AIの設計・構築・実装の費用は、別途お見積もりします。</p></details><details><summary><span class="faq__q">Q</span>福島県外や、いわき・郡山から離れた地域でも対応できますか？</summary><p class="faq__a phrase">無料相談と90分セッションは、オンラインで全国から受けられます。エンジニアが現地に伺う業務効率化・仕組み化診断は、[対応エリアと、エリア外の交通費の扱いを記入]。</p></details></div></div></section><section class="section" aria-label="LINE公式アカウント"><div class="wrap"><div class="keep" style="grid-template-columns: minmax(0, 1fr)">
+<div class="keep__line">
+<div>
+<p class="label">LINE公式アカウント｜登録特典つき</p>
+<h2 class="phrase">まだ相談する段階ではない方も、<br class="pc">まずはLINEで。</h2>
+<p class="phrase">経営とAIのヒントや、セミナーのご案内をお届けします。</p><p class="keep__gift"><span class="keep__gift-tag">友だち登録でプレゼント</span><span class="keep__gift-name">PDF<span class="ib">「まるで自分が書いたような</span><span class="ib">メール作成方法」</span></span><span class="keep__gift-desc">AIを使って、自分らしい言葉づかいのメールを書く方法をまとめました。</span></p>
+<a class="btn-line btn-line--solid" href="#">友だち追加してPDFを受け取る<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="keep__qr" role="img" aria-label="LINE公式アカウントのQRコード">QRコード</div>
+</div>
+</div></div></section><section class="cta-band" aria-labelledby="cta-title"><div class="wrap cta-band__inner"><h2 id="cta-title"><span class="line">浮いた時間を、売上に変える。</span><span class="line">その最初の一歩を、一緒に。</span></h2><p class="phrase">まずは30分、オンラインで。今のお困りごとを伺い、どこから始めるのがよいかを一緒に確認します。</p><div class="actions"><a class="btn-cta" href="/inquiry">無料相談を申し込む<span class="arrow" aria-hidden="true">→</span></a><a class="link-arrow" href="/session">90分セッションの詳細を見る<span class="arrow" aria-hidden="true">→</span></a></div><p class="note">無理な勧誘や、必要のないシステムのご提案は行いません。</p></div></section><section class="section" aria-labelledby="posts-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">関連記事</h2></div><ul class="posts">
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-1.jpg" alt="ノートパソコンを前に経営戦略を話し合う様子"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-2.jpg" alt="業務の仕組み化を示す画面を開いたノートパソコンと手帳"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-3.jpg" alt="オフィスで打合せを行うチームのメンバー"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+</ul></div></section></main>
+</BaseLayout>

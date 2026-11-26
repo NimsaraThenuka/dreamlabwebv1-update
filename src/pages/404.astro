@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="ページが見つかりません｜dreamLab"
+  description="お探しのページは移動または削除された可能性があります。株式会社dreamLabのトップページや各事業ページをご覧ください。"
+  noindex={true}
+>
+<main id="main">
+<section class="page-head" style="border-bottom: 0; padding-block: 112px 128px;">
+<div class="wrap form-wrap">
+<p class="eyebrow">404 NOT FOUND</p>
+<h1 class="h1 phrase">ページが見つかりません。</h1>
+<p class="page-head__lead phrase">お探しのページは移動または削除されたか、URLが変更された可能性があります。</p>
+<div class="actions" style="margin-top: 32px;">
+<a class="btn-cta" href="/">トップページへ戻る<span class="arrow" aria-hidden="true">→</span></a>
+<a class="link-arrow" href="/inquiry">ご相談・お問い合わせ<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

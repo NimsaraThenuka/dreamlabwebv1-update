@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBlogPostingSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBlogPostingSchema(siteUrl, { title: "「失敗しても大丈夫」が子どもを変える。プログラミングとロボット教室が育む自己肯定感", description: "2014年の創業以来大切にしてきた「安心して失敗できる場」。ロボットやプログラミングの試行錯誤を通して、子どもたちが自ら挑戦し始める理由をお伝えします。", path: "/blog-edu-1", image: "/img/blog-edu-1.jpg", datePublished: "2026-10-24", category: "教育・地域共創" }),
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: 'ブログ', path: '/blog' }, { name: "「失敗しても大丈夫」が子どもを変える。プログラミングとロボット教室が育む自己肯定感", path: "/blog-edu-1" }])
+];
+---
+
+<BaseLayout
+  title={"「失敗しても大丈夫」が子どもを変える。プログラミングとロボット教室が育む自己肯定感｜dreamLab"}
+  description={"2014年の創業以来大切にしてきた「安心して失敗できる場」。ロボットやプログラミングの試行錯誤を通して、子どもたちが自ら挑戦し始める理由をお伝えします。"}
+  ogType={"article"}
+  ogImage={"/img/blog-edu-1.jpg"}
+  activeNav={"blog"}
+  simpleHeader={false}
+  stickyBar={{ href: "/inquiry", label: "まずは30分、無料で相談", action: "申し込む →" }}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<div class="wrap">
+<article class="article">
+<header class="article__head">
+<p class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-10-24">2026.10.24</time></p>
+<h1 class="article__title phrase">「失敗しても大丈夫」が子どもを変える。プログラミングとロボット教室が育む自己肯定感</h1>
+<img class="photo photo--img article__eyecatch" src="/img/blog-edu-1.jpg" alt="ロボットづくりに取り組む子どもたち">
+</header>
+
+<div class="learn">
+<p>この記事でわかること</p>
+<ul>
+<li>「正解を早く当てる学び」が子どもの挑戦心を止めてしまう理由</li>
+<li>ロボット・プログラミングのエラー体験が自己肯定感につながる仕組み</li>
+<li>ご家庭や地域でも取り入れられる、子どもへの声かけの工夫</li>
+</ul>
+</div>
+
+<div class="article__body">
+<h2>「間違えたら恥ずかしい」から一歩が止まる</h2>
+<p>2014年に福島県いわき市でdreamLabを立ち上げて以来、英語の学童保育やロボット・プログラミング教室を通して、たくさんの子どもたちと向き合ってきました。</p>
+<p>教室に来たばかりの子どもたちに共通しているのは、「失敗したらどうしよう」「変なことを言って笑われたくない」という強い不安です。学校やテストでは「一発で正解すること」が評価されやすいため、分からない問題に出会うと手が止まってしまう子が少なくありません。</p>
+
+<h3>ロボットは「失敗を前提に動く」教材</h3>
+<p>ところが、ロボットづくりやプログラミングでは、最初から思い通りに動くことはほとんどありません。タイヤが逆に回る、センサーが反応しない、ブロックが外れる——それは「失敗」ではなく、次に直す場所を教えてくれる「ヒント」です。</p>
+
+<img loading="lazy" decoding="async" class="photo photo--landscape photo--img" src="/img/blog-edu-1-body.jpg" alt="ロボットのギアや配線を試行錯誤しながら組み立てる子ども" style="margin: 32px 0">
+
+<h2>自己肯定感が育つ3つのプロセス</h2>
+<p>子どもたちが自信をつけていく場面には、いつも決まった流れがあります。</p>
+
+<ul>
+  <li><strong>1. まず試してみる（安心感）：</strong>「間違えてもいいよ」と言われることで、自分のアイデアを形にしてみる勇気が出ます。</li>
+  <li><strong>2. うまくいかない理由を一緒に探す（観察力）：</strong>講師が答えを教えるのではなく、「どこまで動いた？」「何が違うかな？」と問いかけます。</li>
+  <li><strong>3. 自分の手で直せた瞬間を味わう（達成感）：</strong>「自分で考えて直せた」という実感が、次の挑戦への一番のエネルギーになります。</li>
+</ul>
+
+<blockquote>「最初は黙って見ていただけの子が、半年後には『次はこれを作ってみたい！』と目を輝かせて話してくれるようになります。」</blockquote>
+
+<h2>大人の挑戦する姿も、子どもは見ている</h2>
+<table>
+  <thead>
+    <tr><th>従来の関わり方</th><th>dreamLabが大切にしている関わり方</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>先回りして失敗を防ぐ・答えを教える</td><td>安全な範囲で失敗させ、気づきを引き出す</td></tr>
+    <tr><td>結果（点数・完成度）だけを褒める</td><td>試した工夫や粘り強さ（プロセス）を言葉にして伝える</td></tr>
+    <tr><td>大人だけが教える側になる</td><td>大人も一緒に学び、挑戦する姿を見せる</td></tr>
+  </tbody>
+</table>
+
+<p>子どもたちが安心して挑戦できる環境をつくることは、私たちが経営者支援で目指している「社長が孤立せず挑戦できる場づくり」とも深くつながっています。教育や地域でのワークショップのご相談も随時受け付けています。</p>
+</div>
+
+<aside class="guide" aria-label="ご案内">
+<h2 class="phrase">自社の場合はどうなる？を、まずは30分で。</h2>
+<p class="phrase">今のお困りごとを伺い、どこから始めるのがよいかを一緒に確認します（オンライン・無料）。</p>
+<a class="btn-cta " href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a>
+</aside>
+
+<div class="share">
+<span>記事を共有する</span>
+<a href="#">Facebook</a>
+<a href="#">LINE</a>
+<button type="button">URLをコピー</button>
+</div>
+</article>
+
+<div style="margin-top: 64px">
+<div class="keep" style="grid-template-columns: minmax(0, 1fr)">
+<div class="keep__line">
+<div>
+<p class="label">LINE公式アカウント｜登録特典つき</p>
+<h2 class="phrase">まだ相談する段階ではない方も、<br class="pc">まずはLINEで。</h2>
+<p class="phrase">経営とAIのヒントや、セミナーのご案内をお届けします。</p><p class="keep__gift"><span class="keep__gift-tag">友だち登録でプレゼント</span><span class="keep__gift-name">PDF<span class="ib">「まるで自分が書いたような</span><span class="ib">メール作成方法」</span></span><span class="keep__gift-desc">AIを使って、自分らしい言葉づかいのメールを書く方法をまとめました。</span></p>
+<a class="btn-line btn-line--solid" href="#">友だち追加してPDFを受け取る<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="keep__qr" role="img" aria-label="LINE公式アカウントのQRコード">QRコード</div>
+</div>
+</div>
+</div>
+
+<section class="section" aria-labelledby="posts-title" style="border-top: 0">
+<div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">関連記事</h2></div>
+<ul class="posts">
+
+<li>
+<a href="/blog-edu-2">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-2.jpg" alt="地域の方々がテーブルを囲んで笑顔で話し合うワークショップ"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-10-16">2026.10.16</time></span>
+<span class="post-title">いわき市と大熊町から考える、子育て世代と地域企業がつながる新しい共創の形</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-edu-3">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-3.jpg" alt="講師と一緒にパソコンや電子工作を学ぶ子どもたち"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-09-29">2026.09.29</time></span>
+<span class="post-title">正解のない時代に必要な「自分で考えて動く力」を、地域の放課後から育てる</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-ai-1">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-1.jpg" alt="ノートパソコンを前に経営戦略を話し合う様子"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-11-02">2026.11.02</time></span>
+<span class="post-title">「業務が軽くなった」で終わらせない。AIで浮いた時間を売上に変える3つの視点</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+</ul>
+</section>
+</div>
+</main>
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: "送信完了", path: "/inquiry-thanks" }])
+];
+---
+
+<BaseLayout
+  title={"送信完了｜dreamLab"}
+  description={"株式会社dreamLabへのお申込み・お問い合わせを受け付けました。2営業日以内に担当の小川よりメールにてご連絡いたします。"}
+  ogType={"website"}
+  ogImage={"/img/top-hero-ceo-consult.webp"}
+  activeNav={""}
+  simpleHeader={true}
+  stickyBar={false}
+  noindex={true}
+  isThanks={true}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<section class="page-head" style="border-bottom: 0px;"><div class="wrap"><div class="thanks"><h1 class="h1 phrase" style="font-size: clamp(1.6rem, 3vw, 2.5rem); margin-bottom: 40px;">お申込み・お問い合わせを受け付けました。</h1><p class="phrase">ありがとうございます。2営業日以内に、担当の小川から日程などのご連絡をします。無料相談・90分セッションは、日程が決まりましたら確定のメールをお送りします（オンラインの場合は、ZoomのURLも記載します）。</p><p class="phrase">無料相談をお申し込みの方は、当日までに「今いちばん気になっていること」を1つ考えておいていただくだけで大丈夫です。資料のご準備はいりません。</p><p class="phrase">メールが届かない場合は、迷惑メールフォルダをご確認いただくか、050-6869-4334までお電話ください。</p><div class="line-box"><p class="phrase">LINE公式アカウントでは、友だち登録の特典として、PDF「まるで自分が書いたようなメール作成方法」をプレゼントしています。</p><a class="btn-line" href="#">友だち追加</a></div></div></div></section><section class="section" aria-labelledby="posts-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">人気記事</h2></div><ul class="posts">
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--ai">アイキャッチ画像<br>（なければAI経営支援の代わりの画像）</span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--market">アイキャッチ画像<br>（なければ販路開拓・海外販売の代わりの画像）</span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-post">
+<span class="post-img post-img--edu">アイキャッチ画像<br>（なければ教育・地域共創の代わりの画像）</span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time>[公開日 2026.10.18]</time></span>
+<span class="post-title">[記事タイトル]</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+</ul></div></section></main>
+</BaseLayout>

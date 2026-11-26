@@ -1,0 +1,14 @@
+/node_modules
+/dist
+/data
+.astro
+.git
+.gitignore
+.env
+.env.*
+HOSTING-GUIDE.md
+README.md
+Dockerfile
+.dockerignore
+netlify.toml
+vercel.json

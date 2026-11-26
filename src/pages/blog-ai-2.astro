@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBlogPostingSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBlogPostingSchema(siteUrl, { title: "毎日の転記・見積・メール作成から抜け出す、中小企業の「小さな仕組み化」入門", description: "高額なシステムを入れなくても始められる業務改善。同じ内容の転記や定型メール作成をAIと身近なツールで減らす、中小企業向けの現実的なステップを紹介します。", path: "/blog-ai-2", image: "/img/blog-ai-2.jpg", datePublished: "2026-10-20", category: "AI経営支援" }),
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: 'ブログ', path: '/blog' }, { name: "毎日の転記・見積・メール作成から抜け出す、中小企業の「小さな仕組み化」入門", path: "/blog-ai-2" }])
+];
+---
+
+<BaseLayout
+  title={"毎日の転記・見積・メール作成から抜け出す、中小企業の「小さな仕組み化」入門｜dreamLab"}
+  description={"高額なシステムを入れなくても始められる業務改善。同じ内容の転記や定型メール作成をAIと身近なツールで減らす、中小企業向けの現実的なステップを紹介します。"}
+  ogType={"article"}
+  ogImage={"/img/blog-ai-2.jpg"}
+  activeNav={"blog"}
+  simpleHeader={false}
+  stickyBar={{ href: "/inquiry", label: "まずは30分、無料で相談", action: "申し込む →" }}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<div class="wrap">
+<article class="article">
+<header class="article__head">
+<p class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-10-20">2026.10.20</time></p>
+<h1 class="article__title phrase">毎日の転記・見積・メール作成から抜け出す、中小企業の「小さな仕組み化」入門</h1>
+<img class="photo photo--img article__eyecatch" src="/img/blog-ai-2.jpg" alt="業務の仕組み化を示す画面を開いたノートパソコンと手帳">
+</header>
+
+<div class="learn">
+<p>この記事でわかること</p>
+<ul>
+<li>「人が足りない」と感じる会社の多くに共通する、見えない二重作業の正体</li>
+<li>現場が嫌がらずに使い続けられる「小さな仕組み化」の条件</li>
+<li>メール作成・議事録・日報から始める具体的なAI活用例</li>
+</ul>
+</div>
+
+<div class="article__body">
+<h2>「人が足りない」の前に確認したい、毎日の二重作業</h2>
+<p>「新しい人を採用したいけれど応募が来ない」「今のメンバーだけで精一杯」。こうしたお悩みを抱える会社で実際の1日の動きを見せていただくと、必ずといっていいほど<strong>「同じ情報を、別の場所へ手で打ち直している時間」</strong>が見つかります。</p>
+<p>たとえば、電話やメールで受けた依頼をメモに書き、Excelの見積書に転記し、さらにスケジュール表と請求書にも同じ会社名や金額を入力している——こうした作業が1日に何度も積み重なると、本来お客様に向けるべき時間やエネルギーが奪われてしまいます。</p>
+
+<h3>最初から「完璧な基幹システム」は不要</h3>
+<p>業務改善というと、何百万円もかけて大きなシステムを入れ直すイメージを持たれがちですが、現場が忙しい中で急にすべてを変えると混乱が起きます。まずは一番負担が重い業務を1つだけ切り出し、既存のツールとAIを組み合わせて「入力は1回だけ」の状態をつくるのが現実的です。</p>
+
+<img loading="lazy" decoding="async" class="photo photo--landscape photo--img" src="/img/blog-ai-2-body.jpg" alt="整理されたデスク上のノートパソコン" style="margin: 32px 0">
+
+<h2>今日から始められる3つの小さな仕組み</h2>
+<ul>
+  <li><strong>定型メール・お礼メールの下書き自動化：</strong>要点だけを箇条書きで入力すれば、自社の丁寧な言葉づかいに合わせた返信案を数秒で整えられます。</li>
+  <li><strong>打ち合わせメモから次のタスク整理：</strong>録音や走り書きのメモをAIで整理し、「誰が・いつまでに・何をするか」を抜け漏れなく一覧化します。</li>
+  <li><strong>問い合わせデータの自動転記：</strong>フォームに入力された内容を、そのまま顧客管理表や見積フォーマットへ流し込むことで、転記ミスと手間をゼロにします。</li>
+</ul>
+
+<blockquote>「以前は神経をすり減らして確認していた事務が、ワンクリックで終わるようになった。気持ちの余裕が全然違います。」</blockquote>
+
+<table>
+  <thead>
+    <tr><th>よくある日常業務</th><th>これまでの悩み</th><th>小さな仕組み化後の変化</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>お客様への日程調整・お礼メール</td><td>毎回文面を考え、1通に10〜15分かかる</td><td>要点を入力し、30秒で確認して送信できる</td></tr>
+    <tr><td>案件ごとの書類・明細作成</td><td>複数シートへのコピペで転記ミスが起きる</td><td>元データ1箇所の入力で関連書類を自動生成</td></tr>
+    <tr><td>社内の情報共有・引き継ぎ</td><td>担当者の頭の中にしか情報がない</td><td>定型フォーマットに蓄積され誰でも把握できる</td></tr>
+  </tbody>
+</table>
+
+<p>dreamLabでは「現場で本当に動く仕組み」にこだわり、設計から定着まで寄り添って伴走します。自社のどこに二重作業が隠れているか、まずは30分の無料相談でお話ししてみませんか。</p>
+</div>
+
+<aside class="guide" aria-label="ご案内">
+<h2 class="phrase">自社の場合はどうなる？を、まずは30分で。</h2>
+<p class="phrase">今のお困りごとを伺い、どこから始めるのがよいかを一緒に確認します（オンライン・無料）。</p>
+<a class="btn-cta " href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a>
+</aside>
+
+<div class="share">
+<span>記事を共有する</span>
+<a href="#">Facebook</a>
+<a href="#">LINE</a>
+<button type="button">URLをコピー</button>
+</div>
+</article>
+
+<div style="margin-top: 64px">
+<div class="keep" style="grid-template-columns: minmax(0, 1fr)">
+<div class="keep__line">
+<div>
+<p class="label">LINE公式アカウント｜登録特典つき</p>
+<h2 class="phrase">まだ相談する段階ではない方も、<br class="pc">まずはLINEで。</h2>
+<p class="phrase">経営とAIのヒントや、セミナーのご案内をお届けします。</p><p class="keep__gift"><span class="keep__gift-tag">友だち登録でプレゼント</span><span class="keep__gift-name">PDF<span class="ib">「まるで自分が書いたような</span><span class="ib">メール作成方法」</span></span><span class="keep__gift-desc">AIを使って、自分らしい言葉づかいのメールを書く方法をまとめました。</span></p>
+<a class="btn-line btn-line--solid" href="#">友だち追加してPDFを受け取る<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="keep__qr" role="img" aria-label="LINE公式アカウントのQRコード">QRコード</div>
+</div>
+</div>
+</div>
+
+<section class="section" aria-labelledby="posts-title" style="border-top: 0">
+<div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">関連記事</h2></div>
+<ul class="posts">
+
+<li>
+<a href="/blog-ai-1">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-1.jpg" alt="ノートパソコンを前に経営戦略を話し合う様子"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-11-02">2026.11.02</time></span>
+<span class="post-title">「業務が軽くなった」で終わらせない。AIで浮いた時間を売上に変える3つの視点</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-ai-3">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-3.jpg" alt="オフィスで打合せを行うチームのメンバー"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-10-08">2026.10.08</time></span>
+<span class="post-title">【福島100社ヒアリング中間報告】経営者が本当に手放したい仕事と、AI導入の壁</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-market-1">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-1.jpg" alt="陶器の器を丁寧に梱包して発送準備をする手元"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time datetime="2026-10-28">2026.10.28</time></span>
+<span class="post-title">小さな工房・地域産品でも始められる、海外テスト販売と梱包設計のコツ</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+</ul>
+</section>
+</div>
+</main>
+</BaseLayout>

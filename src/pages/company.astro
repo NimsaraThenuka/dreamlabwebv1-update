@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildProfessionalServiceSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildProfessionalServiceSchema(siteUrl),
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: '会社情報', path: '/company' }])
+];
+---
+
+<BaseLayout
+  title={"会社情報・代表メッセージ｜dreamLab（福島県いわき市）"}
+  description={"株式会社dreamLab（福島県いわき市・大熊町／2014年設立）の会社情報。代表 小川智美のメッセージとプロフィール、支援の体制、会社概要。"}
+  ogType={"website"}
+  ogImage={"/img/ceo-portrait.webp"}
+  activeNav={"company"}
+  simpleHeader={false}
+  stickyBar={false}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<section class="page-head page-head--photo"><div class="wrap page-head__grid"><div><p class="eyebrow">会社情報</p><h1 class="h1"><span class="line">挑戦する経営者の、</span><span class="line"><span class="mark">一番近くに。<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 70 6, 150 4, 214 8 S 286 15, 297 9" fill="none" stroke="#7D6455" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></span></h1></div><img loading="lazy" decoding="async" class="photo photo--landscape photo--img" src="/img/top-hero-ceo-consult.webp" alt="代表の小川智美が、相談に来た社長と笑顔で話している様子" style="object-position: 50% 50%;"></div></section><section class="section" aria-labelledby="msg-title"><div class="wrap"><div class="section-head" style="margin-bottom: 40px;"><p class="vlabel" aria-hidden="true">メッセージ</p><h2 class="label" id="msg-title">代表メッセージ</h2></div><div class="prose phrase"><p>2014年、「子どもの自己肯定感を育む」をミッションに、いわき市でdreamLabを立ち上げました。英語の学童保育やロボット・プログラミング教室で、子どもたちが安心して挑戦できる場をつくってきました。</p><p>経営者として、たくさんの専門家に相談してきました。それでも、最後に決めて動くのは、いつも自分ひとりでした。</p><p>夫を亡くしたあと、夫が残した事業を整理する中で、経営者がどれほど多くのことを一人で抱えていたのかを知りました。あのとき、隣で一緒に考えてくれる人がいたら。その思いが、今の仕事の出発点です。</p><p>福島の会社を回ると、営業も採用も判断も、すべてが社長に集中している姿があります。本当は挑戦したいのに、今日を回すだけで精一杯。だから私は、社長のひとり戦を、チーム戦に変えたい。</p><p>娘や子どもたちに見せたいのは、疲れ切った大人ではなく、夢に向かって走る大人の姿です。子どもたちにつくってきた「安心して挑戦できる場」を、今度は社長のためにつくります。</p><p class="prose__sign">株式会社dreamLab 代表取締役　小川 智美</p></div></div></section><section class="photo-band" aria-label="dreamLab"><img loading="lazy" decoding="async" class="photo-band__img" src="/img/band-company-window.webp" alt="dreamLabのロゴが映る窓に手をあてて、外を見る子ども" style="object-position: 50% 50%;"></section><section class="section" aria-labelledby="profile-title"><div class="wrap message__grid"><img loading="lazy" decoding="async" class="photo photo--portrait photo--img" src="/img/ceo-portrait.webp" alt="株式会社dreamLab 代表取締役 小川智美" style="object-position: 50% 20%;"><div class="message__body"><p class="label">代表プロフィール</p><h2 class="profile__name" id="profile-title">小川 智美</h2><p class="profile__role">株式会社dreamLab 代表取締役</p><ul class="timeline"><li><span></span><div>高校卒業後、アメリカへ留学</div></li><li><span></span><div class="phrase">帰国後、学習塾で0歳から大学受験までの英語を担当（TOEIC900点）</div></li><li><span>2014年</span><div class="phrase">いわきビジネスコンテスト最優秀賞、ベンチャーアワード特別賞などを受賞</div></li><li><span>2014年</span><div>いわき市で株式会社dreamLabを設立</div></li><li><span>2026年</span><div class="phrase">ふくしまアクセラレータープログラム『Next stage』に採択</div></li><li><span>現在</span><div class="phrase">JBIA（日本ビジネスインキュベーション協会）インキュベーションマネージャー</div></li><li><span>現在</span><div class="phrase">ふくしま女性起業家活躍推進協議会 起業アテンダント</div></li></ul></div></div></section><section class="creed" aria-label="理念"><div class="wrap"><p class="creed__big">小さな一歩が、未来をひらく。</p><p class="phrase">教育でも、経営でも、私たちが支えたいのは挑戦する人です。大きな変化も、最初は小さな一歩から。その一歩を、安心して踏み出せる場をつくります。</p></div></section><section class="section" aria-labelledby="hama-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">地域</p><p class="label">地域での取り組み</p><h2 class="h2 phrase" id="hama-title">いわきと大熊町から、福島県全域へ。</h2></div><div class="box"><p class="phrase" style="max-width: 44em;">いわき市と大熊インキュベーションセンター（OIC）がある大熊町を拠点に、福島県全域の企業と地域を支えていきます。人材・福祉・定住といった地域の課題に、AIと子育て世代の力でどう向き合えるかを、地域の方々と一緒に考え、取り組みます。</p><a class="link-arrow" href="/inquiry?type=education">地域との連携について相談する<span class="arrow" aria-hidden="true">→</span></a></div></div></section><section class="section is-dense" aria-labelledby="partner-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">体制</p><p class="label">支援の体制</p><h2 class="h2" id="partner-title">社長を支える、dreamLabのチーム</h2></div><figure class="team3" aria-labelledby="fig2-title">
+<div class="team3__copy">
+<p class="label">dreamLabが目指す支援</p>
+<p class="team3__title" id="fig2-title"><span class="line">経営者の右腕として、</span><span class="line"><span class="mark">考えることから実行まで。</span></span></p>
+<p class="team3__lead phrase">決めるのは、社長。<br>dreamLabは、その思考と実行を支えるチーム。</p>
+</div>
+<div class="team3__chart">
+<div class="team3__ceo">社長</div>
+<p class="team3__ceo-role">会社の未来を描き、決める</p>
+<div class="team3__team">
+<p class="team3__team-name">dreamLabチーム<span>（経営者の右腕）</span></p>
+<div class="team3__cols">
+<div class="team3__col"><p class="team3__col-head">考える</p><ul><li>思考の整理</li><li>課題と戦略の整理</li></ul></div>
+<div class="team3__col"><p class="team3__col-head">つくる</p><ul><li>AI・データ活用</li><li>仕組みづくりと実行</li></ul></div>
+</div>
+</div>
+<p class="team3__goal"><span class="ib">社長ひとりに依存せず、</span><span class="ib">成長できる会社</span></p>
+</div>
+<p class="team3__note phrase">「つくる」のAI・システム開発は、連携する開発チームと一緒に、設計から実装・運用まで一つのチームで進めます。</p>
+</figure><div class="partner"><p class="phrase">「考える」では、社長の頭の中にある考えを言葉にして、課題と戦略を整理します。「つくる」では、その戦略をAIやデータを使った業務の仕組みに落とし込み、現場で回るようになるまで伴走します。</p></div></div></section><section class="section is-split" aria-labelledby="about-title"><div class="wrap"><div class="section-head"><p class="vlabel" aria-hidden="true">会社概要</p><h2 class="h2" id="about-title">会社概要</h2></div><table class="def"><tbody><tr><th scope="row">会社名</th><td>株式会社dreamLab</td></tr><tr><th scope="row">代表者</th><td>代表取締役　小川 智美</td></tr><tr><th scope="row">設立</th><td>2014年11月</td></tr><tr><th scope="row">所在地</th><td>〒970-8026 福島県いわき市平字田町1-2 <span class="ib">猪狩ビル7階 furatto</span></td></tr><tr><th scope="row">拠点</th><td><span class="ib">いわき市（本社）</span>／<span class="ib">大熊町（大熊インキュベーションセンター内）</span></td></tr><tr><th scope="row">電話</th><td>050-6869-4334</td></tr><tr><th scope="row">事業内容</th><td><span class="ib">AI経営支援・経営伴走</span>／<span class="ib">国内外の販路開拓支援</span>／<span class="ib">教育・地域共創</span></td></tr></tbody></table><div class="map"><iframe src="https://www.google.com/maps?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E3%81%84%E3%82%8F%E3%81%8D%E5%B8%82%E5%B9%B3%E5%AD%97%E7%94%B0%E7%94%BA1-2+%E7%8C%AA%E7%8B%A9%E3%83%93%E3%83%AB&amp;z=17&amp;output=embed&amp;hl=ja" title="株式会社dreamLabの所在地の地図（福島県いわき市平字田町1-2 猪狩ビル7階 furatto）" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></div></section><section class="cta-band" aria-labelledby="cta-title"><div class="wrap cta-band__inner"><h2 id="cta-title">まずは、お話を聞かせてください。</h2><div class="actions" style="margin-top: 16px;"><a class="btn-cta" href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a><a class="link-arrow" href="/ai-support">AI経営支援について詳しく見る<span class="arrow" aria-hidden="true">→</span></a></div></div></section></main>
+</BaseLayout>

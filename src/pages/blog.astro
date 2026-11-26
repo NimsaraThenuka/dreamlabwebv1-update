@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: "ブログ", path: "/blog" }])
+];
+---
+
+<BaseLayout
+  title={"ブログ｜AI活用・経営・販路開拓のヒント｜dreamLab"}
+  description={"AIの活用と経営の仕組みづくり、販路開拓・海外販売、教育・地域共創。福島県いわき市のdreamLabが、現場で役立つ考え方をお届けします。"}
+  ogType={"website"}
+  ogImage={"/img/blog-ai-1.jpg"}
+  activeNav={"blog"}
+  simpleHeader={false}
+  stickyBar={false}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+
+<section class="page-head">
+<div class="wrap">
+<h1 class="h1">
+<span class="line">経営、販路開拓、教育の</span>
+<span class="line">ヒントを発信</span>
+</h1>
+<p class="page-head__lead phrase">AIの活用と経営の仕組みづくり、販路開拓・海外販売、教育・地域共創。現場で役立つ考え方をお届けします。</p>
+</div>
+</section>
+
+<section class="section" aria-label="記事一覧">
+<div class="wrap">
+<ul class="tabs" aria-label="カテゴリ">
+
+<li><button type="button" data-tab="all" aria-pressed="true">すべて</button></li>
+
+<li><button type="button" data-tab="ai" aria-pressed="false">AI経営支援</button></li>
+
+<li><button type="button" data-tab="market" aria-pressed="false">販路開拓・海外販売</button></li>
+
+<li><button type="button" data-tab="edu" aria-pressed="false">教育・地域共創</button></li>
+
+</ul>
+<ul class="posts" data-posts>
+
+<li>
+<a href="/blog-ai-1">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-1.jpg" alt="ノートパソコンを前に経営戦略を話し合う様子"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-11-02">2026.11.02</time></span>
+<span class="post-title">「業務が軽くなった」で終わらせない。AIで浮いた時間を売上に変える3つの視点</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-market-1">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-1.jpg" alt="陶器の器を丁寧に梱包して発送準備をする手元"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time datetime="2026-10-28">2026.10.28</time></span>
+<span class="post-title">小さな工房・地域産品でも始められる、海外テスト販売と梱包設計のコツ</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-edu-1">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-1.jpg" alt="ロボットづくりに取り組む子どもたち"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-10-24">2026.10.24</time></span>
+<span class="post-title">「失敗しても大丈夫」が子どもを変える。プログラミングとロボット教室が育む自己肯定感</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-ai-2">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-2.jpg" alt="業務の仕組み化を示す画面を開いたノートパソコンと手帳"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-10-20">2026.10.20</time></span>
+<span class="post-title">毎日の転記・見積・メール作成から抜け出す、中小企業の「小さな仕組み化」入門</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-edu-2">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-2.jpg" alt="地域の方々がテーブルを囲んで笑顔で話し合うワークショップ"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-10-16">2026.10.16</time></span>
+<span class="post-title">いわき市と大熊町から考える、子育て世代と地域企業がつながる新しい共創の形</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-market-2">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-2.jpg" alt="和紙で包まれた地域の特産品と器"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time datetime="2026-10-12">2026.10.12</time></span>
+<span class="post-title">「いい商品なのに伝わらない」を解消する、作り手の想いと価値の言語化ステップ</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-ai-3">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-3.jpg" alt="オフィスで打合せを行うチームのメンバー"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-10-08">2026.10.08</time></span>
+<span class="post-title">【福島100社ヒアリング中間報告】経営者が本当に手放したい仕事と、AI導入の壁</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-market-3">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-3.jpg" alt="海外発送用の箱を準備する工房の店主"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time datetime="2026-10-04">2026.10.04</time></span>
+<span class="post-title">展示会・越境ECに出る前に整えておきたい、BtoB・海外バイヤー向け商品シートの作り方</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-edu-3">
+<span class="post-img post-img--edu"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-edu-3.jpg" alt="講師と一緒にパソコンや電子工作を学ぶ子どもたち"></span>
+<span class="post-meta"><span class="post-cat">教育・地域共創</span><time datetime="2026-09-29">2026.09.29</time></span>
+<span class="post-title">正解のない時代に必要な「自分で考えて動く力」を、地域の放課後から育てる</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+</ul>
+<div class="load-more"><button class="btn-line" type="button">もっと見る</button></div></div>
+</section>
+
+<section class="section" aria-label="LINE公式アカウント">
+<div class="wrap">
+<div class="keep" style="grid-template-columns: minmax(0, 1fr)">
+<div class="keep__line">
+<div>
+<p class="label">LINE公式アカウント｜登録特典つき</p>
+<h2 class="phrase">まだ相談する段階ではない方も、<br class="pc">まずはLINEで。</h2>
+<p class="phrase">経営とAIのヒントや、セミナーのご案内をお届けします。</p><p class="keep__gift"><span class="keep__gift-tag">友だち登録でプレゼント</span><span class="keep__gift-name">PDF<span class="ib">「まるで自分が書いたような</span><span class="ib">メール作成方法」</span></span><span class="keep__gift-desc">AIを使って、自分らしい言葉づかいのメールを書く方法をまとめました。</span></p>
+<a class="btn-line btn-line--solid" href="#">友だち追加してPDFを受け取る<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="keep__qr" role="img" aria-label="LINE公式アカウントのQRコード">QRコード</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-band" aria-labelledby="cta-title">
+<div class="wrap cta-band__inner">
+<h2 id="cta-title" class="phrase">記事を読んで、気になることはありませんか？</h2>
+<div class="actions" style="margin-top: 16px">
+<a class="btn-cta" href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+
+</main>
+</BaseLayout>

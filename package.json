@@ -1,0 +1,20 @@
+{
+  "name": "dreamlab-hp",
+  "version": "1.0.0",
+  "description": "dreamLab corporate website (Astro SSG + production server)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 3000",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 3000",
+    "start": "node server.js",
+    "check": "astro check"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "astro": "^6.0.8"
+  }
+}

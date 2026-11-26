@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: "特定商取引法に基づく表記", path: "/tokusho" }])
+];
+---
+
+<BaseLayout
+  title={"特定商取引法に基づく表記｜dreamLab"}
+  description={"株式会社dreamLabの特定商取引法に基づく表記。販売事業者、所在地、連絡先、販売価格、お支払い方法、提供時期、キャンセル規定を掲載しています。"}
+  ogType={"website"}
+  ogImage={"/img/top-hero-ceo-consult.webp"}
+  activeNav={""}
+  simpleHeader={false}
+  stickyBar={false}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<section class="page-head" style="padding-bottom: 40px">
+<div class="wrap">
+<ul class="tabs" aria-label="規約ページ" style="margin-bottom: 40px">
+
+<li><a href="/privacy">プライバシーポリシー</a></li>
+
+<li><a href="/confidentiality">秘密保持に関する方針</a></li>
+
+<li><a href="/cancel">キャンセル・返金規定</a></li>
+
+<li><a href="/tokusho" aria-current="page">特定商取引法に基づく表記</a></li>
+
+</ul>
+<h1 class="h1 phrase" style="font-size: clamp(1.6rem, 3vw, 2.5rem)">特定商取引法に基づく表記</h1>
+</div>
+</section>
+
+<section class="section" style="padding-top: 64px">
+<div class="wrap">
+<div class="legal phrase">
+
+<!-- P9-1 プライバシーポリシー -->
+
+
+<!-- P9-2 秘密保持に関する方針 -->
+
+
+<!-- P9-3 キャンセル・返金規定 -->
+
+
+<!-- P9-4 特定商取引法に基づく表記 -->
+
+<table class="def">
+<tbody>
+<tr><th scope="row">販売事業者</th><td>株式会社dreamLab</td></tr>
+<tr><th scope="row">代表者・運営責任者</th><td>代表取締役　小川 智美</td></tr>
+<tr><th scope="row">所在地</th><td>〒970-8026 福島県いわき市平字田町1-2 猪狩ビル7階 furatto</td></tr>
+<tr><th scope="row">電話番号</th><td>050-6869-4334（受付時間：平日9:00〜19:00）</td></tr>
+<tr><th scope="row">メールアドレス</th><td><a class="inline-link" href="mailto:info@dreamlabltd.jp">info@dreamlabltd.jp</a></td></tr>
+<tr><th scope="row">販売価格</th><td>90分セッション：50,000円（税込55,000円）／業務効率化・仕組み化診断のモニター価格（先着3社限定）：20万円（税込22万円）／その他のサービス：内容に応じて個別にお見積もり<br>※価格は税抜、カッコ内は税込です<br>※90分セッションから30日以内に経営診断または業務効率化・仕組み化診断をお申し込みの場合、セッション料金（50,000円・税抜）を診断料金から差し引きます</td></tr>
+<tr><th scope="row">商品代金以外の必要料金</th><td>銀行振込の場合の振込手数料（お客様のご負担）。オンラインの場合の通信費。いわき・郡山周辺以外での対面実施の交通費（実費・事前にご案内）</td></tr>
+<tr><th scope="row">お支払い方法</th><td>クレジットカード決済（Stripeの決済ページ）、銀行振込</td></tr>
+<tr><th scope="row">お支払い時期</th><td>90分セッション：日程確定後、セッション前日まで（カードの引き落とし日はカード会社の規定による）。診断・伴走・パートナー：契約書で定める期日まで</td></tr>
+<tr><th scope="row">サービスの提供時期</th><td>無料相談・90分セッション：フォームでお申し込みいただいたあと、日程を調整して実施します。診断・伴走・パートナー：契約書で定める時期に実施します</td></tr>
+<tr><th scope="row">キャンセル・返金</th><td><a class="inline-link" href="/cancel">キャンセル・返金規定</a>をご覧ください。90分セッションは、3営業日前までのご連絡で全額返金します</td></tr>
+<tr><th scope="row">提供方法</th><td>オンライン（Zoom）または対面（いわき・郡山周辺）</td></tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+</main>
+</BaseLayout>

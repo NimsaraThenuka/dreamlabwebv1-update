@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildBlogPostingSchema, buildBreadcrumbSchema } from '../data/structuredData';
+
+const siteUrl = (Astro.site ? Astro.site.toString() : 'https://dreamlabltd.jp').replace(/\/$/, '');
+const jsonLd = [
+  buildBlogPostingSchema(siteUrl, { title: "【福島100社ヒアリング中間報告】経営者が本当に手放したい仕事と、AI導入の壁", description: "福島県内の経営者100社へのヒアリングから見えてきた「社長のひとり戦」の実態。なぜAIを使おうとして止まってしまうのか、現場の本音と突破口をまとめました。", path: "/blog-ai-3", image: "/img/blog-ai-3.jpg", datePublished: "2026-10-08", category: "AI経営支援" }),
+  buildBreadcrumbSchema(siteUrl, [{ name: 'トップ', path: '/' }, { name: 'ブログ', path: '/blog' }, { name: "【福島100社ヒアリング中間報告】経営者が本当に手放したい仕事と、AI導入の壁", path: "/blog-ai-3" }])
+];
+---
+
+<BaseLayout
+  title={"【福島100社ヒアリング中間報告】経営者が本当に手放したい仕事と、AI導入の壁｜dreamLab"}
+  description={"福島県内の経営者100社へのヒアリングから見えてきた「社長のひとり戦」の実態。なぜAIを使おうとして止まってしまうのか、現場の本音と突破口をまとめました。"}
+  ogType={"article"}
+  ogImage={"/img/blog-ai-3.jpg"}
+  activeNav={"blog"}
+  simpleHeader={false}
+  stickyBar={{ href: "/inquiry", label: "まずは30分、無料で相談", action: "申し込む →" }}
+  noindex={false}
+  isThanks={false}
+  jsonLd={jsonLd}
+>
+<main id="main">
+<div class="wrap">
+<article class="article">
+<header class="article__head">
+<p class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-10-08">2026.10.08</time></p>
+<h1 class="article__title phrase">【福島100社ヒアリング中間報告】経営者が本当に手放したい仕事と、AI導入の壁</h1>
+<img class="photo photo--img article__eyecatch" src="/img/blog-ai-3.jpg" alt="オフィスで打合せを行うチームのメンバー">
+</header>
+
+<div class="learn">
+<p>この記事でわかること</p>
+<ul>
+<li>福島の中小企業経営者が最も時間を奪われている業務の傾向</li>
+<li>「AIを試したけれど社内に広がらない」3つの共通理由</li>
+<li>ひとり戦から「チーム戦」へ切り替えた会社の共通点</li>
+</ul>
+</div>
+
+<div class="article__body">
+<h2>社長の時間が、会社の一番のボトルネックになっている</h2>
+<p>dreamLabでは現在、福島県内の中小企業経営者100社へのヒアリングを進めています。業種は製造業、建設業、サービス業、小売・飲食などさまざまですが、社員10〜50名ほどの会社で伺う本音には驚くほど共通点があります。</p>
+<p>それは、<strong>「本当は来期の戦略や新規事業を考えたいのに、日々の確認・判断・事務対応だけで1日が終わってしまう」</strong>という切実な悩みです。</p>
+
+<h3>AIを試して止まってしまう「3つの壁」</h3>
+<ul>
+  <li><strong>壁1｜何に使えば売上が上がるのか分からない：</strong>遊び感覚で文章を作ってみたものの、自社の業務のどこに組み込むべきか設計できていない。</li>
+  <li><strong>壁2｜社内にITやAIに詳しい人がいない：</strong>社長自身が忙しいため、社員に教えながら定着させる時間がない。</li>
+  <li><strong>壁3｜セキュリティや情報漏洩が不安：</strong>お客様情報や社内の数字を扱ってよいのか判断がつかず、結局使うのをやめてしまう。</li>
+</ul>
+
+<img loading="lazy" decoding="async" class="photo photo--landscape photo--img" src="/img/blog-ai-3-body.jpg" alt="向かい合って経営課題のヒアリングを行う様子" style="margin: 32px 0">
+
+<h2>「一緒に考える右腕」と「つくる開発チーム」がいる安心感</h2>
+<p>ヒアリングの中で見えてきたのは、経営者が求めているのは「難しいITの講義」ではなく、<strong>会社の事情を理解したうえで一緒に優先順位を決め、実際に動く仕組みまで作ってくれるパートナー</strong>だということです。</p>
+
+<blockquote>「誰かに業務を任せるためのマニュアル作り自体に時間がなかった。そこを一緒に整理してもらえたのが助かりました。」</blockquote>
+
+<table>
+  <thead>
+    <tr><th>ヒアリングで多いお悩み</th><th>最初に見直すポイント</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>社長に判断・質問が集中する</td><td>よくある判断基準を言語化し、社内で共有できる形にする</td></tr>
+    <tr><td>社員の採用・定着が難しい</td><td>属人化した業務を仕組み化し、新しく入った人がすぐ動けるようにする</td></tr>
+    <tr><td>AIを業務にどう活かすか迷っている</td><td>安全ルールを決めた上で、効果の大きい1業務から小さく導入する</td></tr>
+  </tbody>
+</table>
+
+<p>ヒアリングの声は、これからもブログとLINE公式アカウントで順次ご紹介していきます。自社の状況を整理してみたい経営者の方は、ぜひ一度お話しください。</p>
+</div>
+
+<aside class="guide" aria-label="ご案内">
+<h2 class="phrase">自社の場合はどうなる？を、まずは30分で。</h2>
+<p class="phrase">今のお困りごとを伺い、どこから始めるのがよいかを一緒に確認します（オンライン・無料）。</p>
+<a class="btn-cta " href="/inquiry">まずは30分、無料で相談する<span class="arrow" aria-hidden="true">→</span></a>
+</aside>
+
+<div class="share">
+<span>記事を共有する</span>
+<a href="#">Facebook</a>
+<a href="#">LINE</a>
+<button type="button">URLをコピー</button>
+</div>
+</article>
+
+<div style="margin-top: 64px">
+<div class="keep" style="grid-template-columns: minmax(0, 1fr)">
+<div class="keep__line">
+<div>
+<p class="label">LINE公式アカウント｜登録特典つき</p>
+<h2 class="phrase">まだ相談する段階ではない方も、<br class="pc">まずはLINEで。</h2>
+<p class="phrase">経営とAIのヒントや、セミナーのご案内をお届けします。</p><p class="keep__gift"><span class="keep__gift-tag">友だち登録でプレゼント</span><span class="keep__gift-name">PDF<span class="ib">「まるで自分が書いたような</span><span class="ib">メール作成方法」</span></span><span class="keep__gift-desc">AIを使って、自分らしい言葉づかいのメールを書く方法をまとめました。</span></p>
+<a class="btn-line btn-line--solid" href="#">友だち追加してPDFを受け取る<span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="keep__qr" role="img" aria-label="LINE公式アカウントのQRコード">QRコード</div>
+</div>
+</div>
+</div>
+
+<section class="section" aria-labelledby="posts-title" style="border-top: 0">
+<div class="section-head"><p class="vlabel" aria-hidden="true">記事</p><h2 class="h2" id="posts-title">関連記事</h2></div>
+<ul class="posts">
+
+<li>
+<a href="/blog-ai-1">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-1.jpg" alt="ノートパソコンを前に経営戦略を話し合う様子"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-11-02">2026.11.02</time></span>
+<span class="post-title">「業務が軽くなった」で終わらせない。AIで浮いた時間を売上に変える3つの視点</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-ai-2">
+<span class="post-img post-img--ai"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-ai-2.jpg" alt="業務の仕組み化を示す画面を開いたノートパソコンと手帳"></span>
+<span class="post-meta"><span class="post-cat">AI経営支援</span><time datetime="2026-10-20">2026.10.20</time></span>
+<span class="post-title">毎日の転記・見積・メール作成から抜け出す、中小企業の「小さな仕組み化」入門</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+
+<li>
+<a href="/blog-market-1">
+<span class="post-img post-img--market"><img loading="lazy" decoding="async" class="photo--img" src="/img/blog-market-1.jpg" alt="陶器の器を丁寧に梱包して発送準備をする手元"></span>
+<span class="post-meta"><span class="post-cat">販路開拓・海外販売</span><time datetime="2026-10-28">2026.10.28</time></span>
+<span class="post-title">小さな工房・地域産品でも始められる、海外テスト販売と梱包設計のコツ</span>
+<span class="post-more">記事を読む →</span>
+</a>
+</li>
+</ul>
+</section>
+</div>
+</main>
+</BaseLayout>
